@@ -1,100 +1,186 @@
 /* ==========================================================================
    JAKARIA SAIKAT DHROBO - PORTFOLIO INTERACTIVE CONTROLLER
+   Google Stitch Social Feed Architecture & Dark Mode Support
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Mobile Nav Toggle
-  const navToggle = document.getElementById('navToggle');
-  const navMenu = document.getElementById('navMenu');
+  // Dark Mode Toggle Logic
+  function setDarkMode(isDark) {
+    if (isDark) {
+      document.documentElement.classList.add('dark');
+      document.body.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      document.body.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+    updateDarkModeIcons(isDark);
+  }
 
-  if (navToggle && navMenu) {
-    navToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
+  function updateDarkModeIcons(isDark) {
+    const darkModeBtns = document.querySelectorAll('.dark-mode-toggle');
+    darkModeBtns.forEach(btn => {
+      const icon = btn.querySelector('.material-symbols-outlined');
+      if (icon) {
+        icon.textContent = isDark ? 'light_mode' : 'dark_mode';
+      }
+      btn.setAttribute('title', isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode');
+    });
+  }
+
+  const savedTheme = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const initialDark = savedTheme ? savedTheme === 'dark' : prefersDark;
+  setDarkMode(initialDark);
+
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.dark-mode-toggle');
+    if (btn) {
+      e.preventDefault();
+      const isCurrentlyDark = document.documentElement.classList.contains('dark');
+      setDarkMode(!isCurrentlyDark);
+    }
+  });
+
+  // Mobile Nav Toggle
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
     });
 
-    // Close menu when link clicked
-    document.querySelectorAll('.nav-link').forEach(link => {
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
       link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
+        mobileMenu.classList.add('hidden');
       });
     });
   }
 
-  // Active Navigation Link on Scroll
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-link');
+  // Lightbox Modal Implementation
+  const lightboxModal = document.getElementById('lightboxModal');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  const lightboxClose = document.getElementById('lightboxClose');
 
-  function highlightNavOnScroll() {
-    const scrollY = window.pageYOffset;
+  function openLightbox(src, captionText) {
+    if (!lightboxModal || !lightboxImg || !src) return;
+    lightboxImg.src = src;
+    lightboxImg.alt = captionText || 'Enlarged view';
+    lightboxImg.style.display = 'block';
+    if (lightboxCaption) {
+      lightboxCaption.textContent = captionText || '';
+      lightboxCaption.style.display = captionText ? 'block' : 'none';
+    }
+    lightboxModal.style.display = 'flex';
+    lightboxModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
 
-    sections.forEach(current => {
-      const sectionHeight = current.offsetHeight;
-      const sectionTop = current.offsetTop - 120;
-      const sectionId = current.getAttribute('id');
+  function closeLightbox() {
+    if (!lightboxModal) return;
+    lightboxModal.classList.remove('active');
+    lightboxModal.style.display = 'none';
+    if (lightboxImg) {
+      lightboxImg.removeAttribute('src');
+      lightboxImg.style.display = 'none';
+    }
+    document.body.style.overflow = '';
+  }
 
-      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === '#' + sectionId) {
-            link.classList.add('active');
+  // Ensure lightbox modal is hidden by default on load
+  if (lightboxModal) {
+    lightboxModal.style.display = 'none';
+    if (lightboxImg) {
+      lightboxImg.style.display = 'none';
+    }
+  }
+
+  if (lightboxClose) {
+    lightboxClose.addEventListener('click', closeLightbox);
+  }
+
+  if (lightboxModal) {
+    lightboxModal.addEventListener('click', (e) => {
+      if (e.target === lightboxModal || e.target.classList.contains('lightbox-content')) {
+        closeLightbox();
+      }
+    });
+  }
+
+  // ESC Key to close modal
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightboxModal && (lightboxModal.classList.contains('active') || lightboxModal.style.display === 'flex')) {
+      closeLightbox();
+    }
+  });
+
+  // Attach Lightbox triggers to zoomable images or cards with data-lightbox-src
+  document.body.addEventListener('click', (e) => {
+    if (e.target.closest('a[target="_blank"]') || e.target.closest('a[download]') || e.target.closest('.dark-mode-toggle')) {
+      return;
+    }
+
+    const zoomImg = e.target.closest('.zoomable-image');
+    if (zoomImg) {
+      const src = zoomImg.getAttribute('src') || zoomImg.getAttribute('data-src');
+      const caption = zoomImg.getAttribute('alt') || zoomImg.getAttribute('title');
+      if (src) {
+        openLightbox(src, caption);
+      }
+      return;
+    }
+
+    const lightboxCard = e.target.closest('[data-lightbox-src]');
+    if (lightboxCard) {
+      e.preventDefault();
+      const src = lightboxCard.getAttribute('data-lightbox-src');
+      const caption = lightboxCard.getAttribute('data-caption') || lightboxCard.getAttribute('data-title');
+      if (src) {
+        openLightbox(src, caption);
+      }
+    }
+  });
+
+  // ScrollSpy for Top Header & Profile Tabs
+  const sections = document.querySelectorAll('section[id], article[id]');
+  const topNavLinks = document.querySelectorAll('header nav a[href^="#"]');
+  const profileTabLinks = document.querySelectorAll('.profile-tab-bar a[href^="#"]');
+
+  function updateActiveNavOnScroll() {
+    const scrollPosition = window.scrollY + 120;
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      const id = section.getAttribute('id');
+
+      if (id && scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+        topNavLinks.forEach(link => {
+          if (link.getAttribute('href') === `#${id}`) {
+            link.classList.add('bg-[#f0f2f5]', 'text-[#0866ff]', 'font-bold');
+            link.classList.remove('text-[#65676b]');
+          } else {
+            link.classList.remove('bg-[#f0f2f5]', 'text-[#0866ff]', 'font-bold');
+            link.classList.add('text-[#65676b]');
+          }
+        });
+
+        profileTabLinks.forEach(tab => {
+          if (tab.getAttribute('href') === `#${id}`) {
+            tab.classList.add('text-[#0866ff]', 'border-b-[3px]', 'border-[#0866ff]', 'font-bold');
+            tab.classList.remove('text-[#65676b]');
+          } else {
+            tab.classList.remove('text-[#0866ff]', 'border-b-[3px]', 'border-[#0866ff]', 'font-bold');
+            tab.classList.add('text-[#65676b]');
           }
         });
       }
     });
   }
 
-  window.addEventListener('scroll', highlightNavOnScroll);
-
-  // Certificate Modal Handlers
-  const modal = document.getElementById('certModal');
-  const modalClose = document.getElementById('modalClose');
-  const modalTitle = document.getElementById('modalTitle');
-  const modalBody = document.getElementById('modalBody');
-
-  document.querySelectorAll('[data-cert]').forEach(card => {
-    card.addEventListener('click', (e) => {
-      // If user clicked directly on an external link inside card, allow link navigation
-      if (e.target.closest('a[target="_blank"]')) {
-        return;
-      }
-      e.preventDefault();
-
-      const certTitleText = card.getAttribute('data-title') || 'Certificate Details';
-      const certImg = card.getAttribute('data-img');
-      const certUrl = card.getAttribute('data-url');
-      const certDetail = card.getAttribute('data-detail') || 'Verified Credential.';
-
-      if (modalTitle && modalBody && modal) {
-        modalTitle.textContent = certTitleText;
-        let html = '';
-        if (certImg) {
-          html += `<div style="margin-bottom: 20px; text-align: center;">
-            <img src="${certImg}" alt="${certTitleText}" style="max-width: 100%; max-height: 400px; border-radius: 8px; border: 1px solid var(--border-glass); box-shadow: 0 8px 24px rgba(0,0,0,0.6);">
-          </div>`;
-        }
-        html += `<p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px;">${certDetail}</p>`;
-        if (certUrl && certUrl !== '#') {
-          html += `<div style="text-align: center;">
-            <a href="${certUrl}" target="_blank" rel="noopener noreferrer" class="btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
-              Verify Credential Online ↗
-            </a>
-          </div>`;
-        }
-        modalBody.innerHTML = html;
-        modal.classList.add('active');
-      }
-    });
-  });
-
-  if (modalClose && modal) {
-    modalClose.addEventListener('click', () => {
-      modal.classList.remove('active');
-    });
-
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.classList.remove('active');
-      }
-    });
-  }
+  window.addEventListener('scroll', updateActiveNavOnScroll);
+  updateActiveNavOnScroll();
 });

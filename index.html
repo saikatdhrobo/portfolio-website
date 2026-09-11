@@ -2,829 +2,1396 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Jakaria Saikat Dhrobo - Research Assistant at UFTB | AI Intern at Decodelabs | Semrush Certified in SEO. Specializing in Artificial Intelligence, Research & Development, and Emerging Technologies.">
-    <meta name="keywords"
-        content="Jakaria Saikat Dhrobo, AI Research, Artificial Intelligence, Research Assistant, UFTB, Decodelabs, SEO Professional, Machine Learning">
-    <meta name="author" content="Jakaria Saikat Dhrobo">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Jakaria Saikat Dhrobo — Research Assistant at UFTB & AI Engineer. Specializing in Artificial Intelligence, Agentic AI, IoT Telemetry, and Emerging Technologies." />
+  <meta name="keywords"
+    content="Jakaria Saikat Dhrobo, AI Research, Artificial Intelligence, Research Assistant, UFTB, Agentic AI, Machine Learning, IoT, SEO" />
+  <meta name="author" content="Jakaria Saikat Dhrobo" />
 
-    <title>Jakaria Saikat Dhrobo — Research Assistant & AI Engineer</title>
+  <title>Jakaria Saikat Dhrobo — Research Assistant & AI Engineer</title>
 
-    <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/images/profile.jpg" />
 
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
+  <!-- Google Fonts: Noto Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/jpeg" href="assets/images/favicon.png">
+  <!-- Google Material Symbols Outlined -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "fb-blue": "#0866ff",
+            "fb-hover": "#1877f2",
+            "fb-bg": "#f0f2f5",
+            "surface": "#ffffff",
+            "text-main": "#050505",
+            "text-sub": "#65676b",
+            "divider": "#e4e6eb",
+            "badge-bg": "#e7f3ff",
+            "badge-text": "#1877f2"
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Custom Google Stitch Facebook Theme Stylesheet -->
+  <link rel="stylesheet" href="css/stitch-theme.css"/>
+
+  <!-- Inline Dark Mode Check Script -->
+  <script>
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
 </head>
 
-<body>
+<body class="bg-[#f0f2f5] text-[#050505] antialiased min-h-screen">
 
-    <!-- Header Navigation -->
-    <nav class="nav" id="nav">
-        <div class="nav-container">
-            <a href="#hero" class="nav-logo">
-                <div class="nav-logo-badge">SD</div>
-                <span>Saikat Dhrobo</span>
-            </a>
+  <!-- TOP FACEBOOK-STYLE APP HEADER -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-[#e4e6eb] h-14 shadow-sm">
+    <div class="max-w-[1280px] mx-auto h-full px-4 flex items-center justify-between gap-3">
+      <!-- Logo Identity -->
+      <div class="flex items-center gap-3">
+        <a href="#top"
+          class="w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden border border-[#e4e6eb] shadow-sm hover:opacity-90 transition-opacity flex-shrink-0"
+          title="Jakaria Saikat Dhrobo">
+          <img src="assets/images/profile.jpg" alt="Saikat Dhrobo Profile"
+            class="w-full h-full object-cover rounded-full" />
+        </a>
+        <a href="#top" class="font-bold text-[16px] text-[#050505] tracking-tight hidden sm:block">
+          Saikat Dhrobo
+        </a>
+      </div>
 
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#publications" class="nav-link">Publications</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#certifications" class="nav-link">Certifications</a></li>
-                <li><a href="#achievements" class="nav-link">Achievements</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><a href="assets/resume/Jakaria_Saikat_Dhrobo_Resume.pdf" download class="nav-resume-btn">Resume</a></li>
-            </ul>
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden lg:flex items-center justify-center gap-1 font-semibold text-[13.5px] text-[#65676b] py-1">
+        <a href="#about"
+          class="top-nav-link inline-flex items-center gap-1.5 px-3 py-2 rounded-lg hover:bg-[#f0f2f5] hover:text-[#050505] transition-colors whitespace-nowrap">
+          <span class="material-symbols-outlined text-[18px]">person</span>
+          <span>About</span>
+        </a>
+        <a href="#skills"
+          class="top-nav-link inline-flex items-center gap-1.5 px-3 py-2 rounded-lg hover:bg-[#f0f2f5] hover:text-[#050505] transition-colors whitespace-nowrap">
+          <span class="material-symbols-outlined text-[18px]">code</span>
+          <span>Skills</span>
+        </a>
+        <a href="#publications"
+          class="top-nav-link inline-flex items-center gap-1.5 px-3 py-2 rounded-lg hover:bg-[#f0f2f5] hover:text-[#050505] transition-colors whitespace-nowrap">
+          <span class="material-symbols-outlined text-[18px]">menu_book</span>
+          <span>Publications</span>
+        </a>
+        <a href="#projects"
+          class="top-nav-link inline-flex items-center gap-1.5 px-3 py-2 rounded-lg hover:bg-[#f0f2f5] hover:text-[#050505] transition-colors whitespace-nowrap">
+          <span class="material-symbols-outlined text-[18px]">folder_special</span>
+          <span>Projects</span>
+        </a>
+        <a href="#experience"
+          class="top-nav-link inline-flex items-center gap-1.5 px-3 py-2 rounded-lg hover:bg-[#f0f2f5] hover:text-[#050505] transition-colors whitespace-nowrap">
+          <span class="material-symbols-outlined text-[18px]">history_edu</span>
+          <span>Experience</span>
+        </a>
+        <a href="#certifications"
+          class="top-nav-link inline-flex items-center gap-1.5 px-3 py-2 rounded-lg hover:bg-[#f0f2f5] hover:text-[#050505] transition-colors whitespace-nowrap">
+          <span class="material-symbols-outlined text-[18px]">verified</span>
+          <span>Certifications</span>
+        </a>
+        <a href="#achievements"
+          class="top-nav-link inline-flex items-center gap-1.5 px-3 py-2 rounded-lg hover:bg-[#f0f2f5] hover:text-[#050505] transition-colors whitespace-nowrap">
+          <span class="material-symbols-outlined text-[18px]">military_tech</span>
+          <span>Achievements</span>
+        </a>
+      </nav>
 
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
+      <!-- Right Action Controls -->
+      <div class="flex items-center gap-2 flex-shrink-0">
+        <!-- Dark Mode Toggle Button -->
+        <button class="dark-mode-toggle p-2 rounded-lg bg-[#f0f2f5] hover:bg-[#e4e6eb] text-[#050505] transition-all flex items-center justify-center border border-[#d8dadf]" title="Toggle Theme">
+          <span class="material-symbols-outlined text-[20px]">dark_mode</span>
+        </button>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero-background-grid"></div>
-
-        <div class="hero-content">
-            <div class="hero-avatar-wrapper">
-                <div class="hero-avatar-ring"></div>
-                <img src="assets/images/profile.jpg" alt="Jakaria Saikat Dhrobo" class="hero-avatar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                <div class="hero-avatar-fallback" style="display: none;">SD</div>
-            </div>
-
-            <h1 class="hero-name">Jakaria Saikat Dhrobo</h1>
-            <p class="hero-tagline">Research Assistant & AI Engineer</p>
-
-            <!-- <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 24px; font-size: 1.05rem;">
-                Research Assistant at UFTB | AI Intern at Decodelabs | Semrush Certified in SEO
-            </p> -->
-
-            <!-- Quick Stats Counter -->
-            <div class="hero-stats-grid">
-                <div class="stat-item">
-                    <div class="stat-number accent">1</div>
-                    <div class="stat-label">Publication</div>
-                </div>
-                <div class="stat-item" style="border-left: 1px solid var(--border-glass); border-right: 1px solid var(--border-glass); padding: 0 24px;">
-                    <div class="stat-number accent">2</div>
-                    <div class="stat-label">Projects</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number accent">5</div>
-                    <div class="stat-label">Certifications</div>
-                </div>
-            </div>
-
-            <!-- Hero CTAs -->
-            <div class="hero-buttons">
-                <a href="#projects" class="btn-primary">
-                    View Projects
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                </a>
-                <a href="assets/resume/Jakaria_Saikat_Dhrobo_Resume.pdf" download class="btn-secondary">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                        <polyline points="7 10 12 15 17 10"></polyline>
-                        <line x1="12" y1="15" x2="12" y2="3"></line>
-                    </svg>
-                    Download Resume
-                </a>
-            </div>
-
-            <a href="#about" class="hero-scroll-down">
-                <span>SCROLL DOWN</span>
-                <svg class="hero-scroll-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-            </a>
-        </div>
-    </section>
-
-    <!-- Section 01: About -->
-    <section class="section" id="about">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-index-wrapper">
-                    <span class="section-number">01</span>
-                    <div class="section-line"></div>
-                </div>
-                <h2 class="section-title">About</h2>
-            </div>
-
-            <div class="about-grid">
-                <!-- Left Bio Card -->
-                <div class="about-left-card">
-                    <p class="about-bio-text">
-                        I am a technology researcher and engineering student with interests in artificial intelligence,
-                        intelligent systems, research, and digital growth. My work focuses on learning, exploring,
-                        and applying technology to practical problems through research and continuous experimentation.
-                    </p>
-                    <p class="about-bio-text">
-                        Currently, I serve as a Research Assistant at the University of Frontier Technology,
-                        Bangladesh (UFTB) and have completed a Backend AI Engineering Internship at FlyRank.
-                        These experiences have helped me develop practical exposure to research activities,
-                        backend automation, data-heavy systems, and agentic AI architectures.
-                    </p>
-
-                    <div class="about-highlights-row">
-                        <div class="highlight-item">
-                            <div class="highlight-val" style="color: var(--accent);">1</div>
-                            <div class="highlight-lbl">IEEE Paper</div>
-                        </div>
-                        <div class="highlight-item">
-                            <div class="highlight-val" style="color: var(--accent);">2</div>
-                            <div class="highlight-lbl">Projects</div>
-                        </div>
-                        <div class="highlight-item">
-                            <div class="highlight-val" style="color: var(--accent);">4</div>
-                            <div class="highlight-lbl">Positions</div>
-                        </div>
-                    </div>
-
-                    <a href="assets/resume/Jakaria_Saikat_Dhrobo_Resume.pdf" download class="btn-primary" style="width: 100%; justify-content: center;">
-                        Download Resume
-                    </a>
-                </div>
-
-                <!-- Right Sub-blocks -->
-                <div class="about-right-content">
-                    <!-- Research Interests -->
-                    <div>
-                        <h3 class="sub-block-title">Research Interests</h3>
-                        <div class="pills-cloud">
-                            <span class="pill-badge">Artificial Intelligence</span>
-                            <span class="pill-badge">Agentic AI</span>
-                            <span class="pill-badge">Machine Learning</span>
-                            <span class="pill-badge">LLM</span>
-                            <span class="pill-badge">IoMT</span>
-                            <span class="pill-badge">SEO</span>
-                            <span class="pill-badge">Emerging Tech</span> 
-                        </div>
-                    </div>
-
-                    <!-- Education Timeline -->
-                    <div>
-                        <h3 class="sub-block-title">Education</h3>
-                        <div class="education-timeline-list">
-                            <div class="edu-item">
-                                <div class="edu-year">2022 – Present</div>
-                                <div class="edu-degree">B.Sc. in IoT & Robotics Engineering</div>
-                                <div class="edu-school">University of Frontier Technology, Bangladesh (UFTB)</div>
-                            </div>
-                            <div class="edu-item">
-                                <div class="edu-year">2018 – 2019</div>
-                                <div class="edu-degree">Higher Secondary School Certificate</div>
-                                <div class="edu-school">Abdul Kadir Mollah City College</div>
-                            </div>
-                            <div class="edu-item">
-                                <div class="edu-year">2018</div>
-                                <div class="edu-degree">Secondary School Certificate</div>
-                                <div class="edu-school">NKM High School & Homes</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 02: Technical Skills -->
-    <section class="section" id="skills">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-index-wrapper">
-                    <span class="section-number">02</span>
-                    <div class="section-line"></div>
-                </div>
-                <h2 class="section-title">Technical Skills</h2>
-                <p class="section-subtitle">Technologies and domains I work with</p>
-            </div>
-
-            <div class="skills-grid">
-                <!-- Skill Card 1 -->
-                <div class="skill-card">
-                    <div class="skill-card-header">
-                        <div class="skill-icon-badge">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="2" y="2" width="20" height="8" rx="2"></rect>
-                                <rect x="2" y="14" width="20" height="8" rx="2"></rect>
-                                <line x1="6" y1="6" x2="6.01" y2="6"></line>
-                                <line x1="6" y1="18" x2="6.01" y2="18"></line>
-                            </svg>
-                        </div>
-                        <h3 class="skill-category-title">AI & Machine Learning</h3>
-                    </div>
-                    <div class="skill-tags-wrapper">
-                        <span class="skill-chip">Python</span>
-                        <span class="skill-chip">Machine Learning</span>
-                        <span class="skill-chip">Deep Learning</span>
-                        <span class="skill-chip">Model Optimization</span>
-                        <span class="skill-chip">Intelligent Systems</span>
-                    </div>
-                </div>
-
-                <!-- Skill Card 2 -->
-                <div class="skill-card">
-                    <div class="skill-card-header">
-                        <div class="skill-icon-badge">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="16 18 22 12 16 6"></polyline>
-                                <polyline points="8 6 2 12 8 18"></polyline>
-                            </svg>
-                        </div>
-                        <h3 class="skill-category-title">Web & Backend</h3>
-                    </div>
-                    <div class="skill-tags-wrapper">
-                        <span class="skill-chip">HTML5 / CSS3</span>
-                        <span class="skill-chip">JavaScript</span>
-                        <span class="skill-chip">Flask</span>
-                        <span class="skill-chip">SQLAlchemy</span>
-                        <span class="skill-chip">Relational Databases</span>
-                    </div>
-                </div>
-
-                <!-- Skill Card 3 -->
-                <div class="skill-card">
-                    <div class="skill-card-header">
-                        <div class="skill-icon-badge">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                <polyline points="14 2 14 8 20 8"></polyline>
-                                <line x1="16" y1="13" x2="8" y2="13"></line>
-                                <line x1="16" y1="17" x2="8" y2="17"></line>
-                            </svg>
-                        </div>
-                        <h3 class="skill-category-title">Research & Writing</h3>
-                    </div>
-                    <div class="skill-tags-wrapper">
-                        <span class="skill-chip">Technical Writing</span>
-                        <span class="skill-chip">Research Methodology</span>
-                        <span class="skill-chip">Literature Analysis</span>
-                        <span class="skill-chip">Academic Publishing</span>
-                    </div>
-                </div>
-
-                <!-- Skill Card 4 -->
-                <div class="skill-card">
-                    <div class="skill-card-header">
-                        <div class="skill-icon-badge">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                            </svg>
-                        </div>
-                        <h3 class="skill-category-title">SEO & Digital Visibility</h3>
-                    </div>
-                    <div class="skill-tags-wrapper">
-                        <span class="skill-chip">Semrush Certified</span>
-                        <span class="skill-chip">Keyword Research</span>
-                        <span class="skill-chip">Content Strategy</span>
-                        <span class="skill-chip">Search Visibility</span>
-                    </div>
-                </div>
-
-                <!-- Skill Card 5 -->
-                <div class="skill-card">
-                    <div class="skill-card-header">
-                        <div class="skill-icon-badge">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                                <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                            </svg>
-                        </div>
-                        <h3 class="skill-category-title">Tools & Environment</h3>
-                    </div>
-                    <div class="skill-tags-wrapper">
-                        <span class="skill-chip">Git / GitHub</span>
-                        <span class="skill-chip">VS Code</span>
-                        <span class="skill-chip">Antigravity</span>
-                        <span class="skill-chip">Zcode</span>
-                        <span class="skill-chip">OmniRoute</span>
-                        <span class="skill-chip">Google Search Console</span>
-                        <span class="skill-chip">Google Analytics</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 03: Publications -->
-    <section class="section" id="publications">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-index-wrapper">
-                    <span class="section-number">03</span>
-                    <div class="section-line"></div>
-                </div>
-                <h2 class="section-title">Publications</h2>
-                <p class="section-subtitle">Peer-reviewed research papers</p>
-            </div>
-
-            <div class="publications-wrapper">
-                <div class="pub-card-demo">
-                    <div class="pub-date-pill">Jan 2026</div>
-                    <div class="pub-info">
-                        <h3 class="pub-title-demo">
-                            An Intelligent IoT-Enabled Automated Medicine Dispensing and Health Management System
-                        </h3>
-                        <div class="pub-venue-demo">IEEE ICECTE 2026, Rajshahi, Bangladesh</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 04: Projects -->
-    <section class="section" id="projects">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-index-wrapper">
-                    <span class="section-number">04</span>
-                    <div class="section-line"></div>
-                </div>
-                <h2 class="section-title">Projects</h2>
-                <p class="section-subtitle">Selected development work across AI, IoT, and Web Systems</p>
-            </div>
-
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <div>
-                        <div class="project-top-bar">
-                            <div class="project-logo-badge">KR</div>
-                            <span class="project-featured-tag">FEATURED PROJECT</span>
-                        </div>
-                        <h3 class="project-title">KaliakairRental</h3>
-                        <p class="project-description">
-                            Data-driven property management system focusing on backend logic and secure data flow. Integrated relational databases using SQLAlchemy and Flask to handle user authentication, property listings, and real-time user dashboards.
-                        </p>
-                        <ul class="project-bullets">
-                            <li>Relational database integration with SQLAlchemy & Flask</li>
-                            <li>Secure user authentication & interactive dashboards</li>
-                            <li>Structured property search & backend logic</li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <div class="project-tech-stack">
-                            <span class="tech-tag">HTML/CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Flask</span>
-                            <span class="tech-tag">SQLAlchemy</span>
-                        </div>
-
-                        <a href="https://github.com/saikatdhrobo/modern-rental-platform" target="_blank" rel="noopener noreferrer" class="project-action-btn">
-                            <span>Explore Repository</span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <line x1="7" y1="17" x2="17" y2="7"></line>
-                                <polyline points="7 7 17 7 17 17"></polyline>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div>
-                        <div class="project-top-bar">
-                            <div class="project-logo-badge">IS</div>
-                            <span class="project-featured-tag">FEATURED PROJECT</span>
-                        </div>
-                        <h3 class="project-title">IgnisShield</h3>
-                        <p class="project-description">
-                            Automated hardware system centered around logic-driven problem-solving and environmental sensors. Programmed sensor integration to process real-time physical surroundings, allowing threat detection and automated safety responses.
-                        </p>
-                        <ul class="project-bullets">
-                            <li>Real-time environmental threat detection</li>
-                            <li>Automated safety response triggering</li>
-                            <li>Sensor logic integration & hardware programming</li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <div class="project-tech-stack">
-                            <span class="tech-tag">IoT</span>
-                            <span class="tech-tag">Sensors</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Real-Time Monitoring</span>
-                        </div>
-
-                        <a href="https://github.com/saikatdhrobo/team-compu-firefighting-robotics" target="_blank" rel="noopener noreferrer" class="project-action-btn">
-                            <span>Explore Repository</span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <line x1="7" y1="17" x2="17" y2="7"></line>
-                                <polyline points="7 7 17 7 17 17"></polyline>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 05: Experience & Contributions -->
-    <section class="section" id="experience">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-index-wrapper">
-                    <span class="section-number">05</span>
-                    <div class="section-line"></div>
-                </div>
-                <h2 class="section-title">Experience & Contributions</h2>
-                <p class="section-subtitle">Professional roles and academic positions</p>
-            </div>
-
-            <div class="experience-timeline">
-                <!-- Exp 1 -->
-                <div class="experience-item-card">
-                    <div class="exp-header">
-                        <div>
-                            <h3 class="exp-role-title">Backend AI Engineering Intern</h3>
-                            <div class="exp-company-name">FlyRank</div>
-                        </div>
-                        <span class="exp-period">Completed Internship</span>
-                    </div>
-                    <p class="exp-description">
-                        Engineered automation and data-heavy applications, developed custom agent skills with technical documentation, and conducted token/cost analysis for AI workflows.
-                    </p>
-                </div>
-
-                <!-- Exp 2 -->
-                <div class="experience-item-card">
-                    <div class="exp-header">
-                        <div>
-                            <h3 class="exp-role-title">Research Assistant</h3>
-                            <div class="exp-company-name">University of Frontier Technology, Bangladesh (UFTB)</div>
-                        </div>
-                        <span class="exp-period">Current Position</span>
-                    </div>
-                    <p class="exp-description">
-                        Collaborating with faculty members (Supervisor: Md. Rafiqul Islam, Lecturer, IRE, UFTB) on research involving data analysis, intelligent system architectures, and healthcare IoT applications.
-                    </p>
-                </div>
-
-                <!-- Exp 3 -->
-                <div class="experience-item-card">
-                    <div class="exp-header">
-                        <div>
-                            <h3 class="exp-role-title">Publications Assistant</h3>
-                            <div class="exp-company-name">UFTB Robotics Club</div>
-                        </div>
-                        <span class="exp-period">Ex-Publication Executive</span>
-                    </div>
-                    <p class="exp-description">
-                        Contributed to publication support activities, documentation, technical writing, and digital publishing initiatives within UFTB Robotics Club.
-                    </p>
-                </div>
-
-                <!-- Exp 4 -->
-                <div class="experience-item-card">
-                    <div class="exp-header">
-                        <div>
-                            <h3 class="exp-role-title">Digital Marketing Intern</h3>
-                            <div class="exp-company-name">GAOTek Inc.</div>
-                        </div>
-                        <span class="exp-period">Completed Internship</span>
-                    </div>
-                    <p class="exp-description">
-                        Developed digital marketing strategies, optimized SEO campaigns, and enhanced online search visibility for global technology solutions.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 06: Certifications -->
-    <section class="section" id="certifications">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-index-wrapper">
-                    <span class="section-number">06</span>
-                    <div class="section-line"></div>
-                </div>
-                <h2 class="section-title">Certifications & Credentials</h2>
-                <p class="section-subtitle">Verified professional credentials, courses, and certifications</p>
-            </div>
-
-            <div class="certifications-grid">
-                <!-- Cert 1 -->
-                <div class="cert-card" data-cert="ai-fluency" data-title="AI Fluency: Framework & Foundations" data-img="assets/images/cert-ai-fluency.jpg" data-url="https://verify.skilljar.com/c/78xs6rpbojjt" data-detail="Certificate of completion for AI Fluency: Framework & Foundations by Anthropic. Certificate No: 78xs6rpbojjt.">
-                    <div class="cert-image-box">
-                        <img src="assets/images/cert-ai-fluency.jpg" alt="AI Fluency Framework & Foundations Certificate">
-                        <div class="cert-overlay-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                                <line x1="11" y1="8" x2="11" y2="14"></line>
-                                <line x1="8" y1="11" x2="14" y2="11"></line>
-                            </svg>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="cert-title">AI Fluency: Framework & Foundations</h3>
-                        <div class="cert-issuer">Anthropic</div>
-                        <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px;">ID: 78xs6rpbojjt</div>
-                    </div>
-                    <a href="https://verify.skilljar.com/c/78xs6rpbojjt" target="_blank" rel="noopener noreferrer" class="cert-verify-btn">
-                        <span>Verify Credential</span>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="7" y1="17" x2="17" y2="7"></line>
-                            <polyline points="7 7 17 7 17 17"></polyline>
-                        </svg>
-                    </a>
-                </div>
-
-                <!-- Cert 2 -->
-                <div class="cert-card" data-cert="claude" data-title="Claude Code in Action" data-img="assets/images/cert-claude.jpg" data-url="https://verify.skilljar.com/c/9x9bedr8ojhh" data-detail="Certificate of completion for Claude Code in Action by Anthropic. Issued May 19, 2026. Certificate No: 9x9bedr8ojhh.">
-                    <div class="cert-image-box">
-                        <img src="assets/images/cert-claude.jpg" alt="Claude Code in Action Certificate">
-                        <div class="cert-overlay-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                                <line x1="11" y1="8" x2="11" y2="14"></line>
-                                <line x1="8" y1="11" x2="14" y2="11"></line>
-                            </svg>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="cert-title">Claude Code in Action</h3>
-                        <div class="cert-issuer">Anthropic</div>
-                        <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px;">Issued May 19, 2026 • ID: 9x9bedr8ojhh</div>
-                    </div>
-                    <a href="https://verify.skilljar.com/c/9x9bedr8ojhh" target="_blank" rel="noopener noreferrer" class="cert-verify-btn">
-                        <span>Verify Credential</span>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="7" y1="17" x2="17" y2="7"></line>
-                            <polyline points="7 7 17 7 17 17"></polyline>
-                        </svg>
-                    </a>
-                </div>
-
-                <!-- Cert 3 -->
-                <div class="cert-card" data-cert="semrush" data-title="Semrush SEO Crash Course with Brian Dean" data-img="assets/images/cert-semrush.jpg" data-url="#" data-detail="Certified in SEO Crash Course by Semrush Academy & Brian Dean. Certificate ID: b25f095d67 (Valid thru June 2027).">
-                    <div class="cert-image-box">
-                        <img src="assets/images/cert-semrush.jpg" alt="Semrush SEO Crash Course Certificate">
-                        <div class="cert-overlay-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                                <line x1="11" y1="8" x2="11" y2="14"></line>
-                                <line x1="8" y1="11" x2="14" y2="11"></line>
-                            </svg>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="cert-title">Semrush SEO Crash Course</h3>
-                        <div class="cert-issuer">Semrush Academy</div>
-                        <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px;">ID: b25f095d67 • Valid thru June 2027</div>
-                    </div>
-                    <a href="#" class="cert-verify-btn">
-                        <span>View Certificate</span>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="7" y1="17" x2="17" y2="7"></line>
-                            <polyline points="7 7 17 7 17 17"></polyline>
-                        </svg>
-                    </a>
-                </div>
-
-                <!-- Cert 4 -->
-                <div class="cert-card" data-cert="iot" data-title="Internet of Things (IoT) Online Course" data-img="assets/images/cert-iot.jpg" data-url="https://ude.my/UC-7d9cb802-437b-46c8-9e16-03aa607b1c6b" data-detail="Certificate of completion for Internet of Things (IoT) Online Course by Udemy / Makeintern. Issued March 16, 2024. Certificate ID: UC-7d9cb802-437b-46c8-9e16-03aa607b1c6b.">
-                    <div class="cert-image-box">
-                        <img src="assets/images/cert-iot.jpg" alt="Internet of Things IoT Certificate">
-                        <div class="cert-overlay-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                                <line x1="11" y1="8" x2="11" y2="14"></line>
-                                <line x1="8" y1="11" x2="14" y2="11"></line>
-                            </svg>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="cert-title">Internet of Things (IoT) Course</h3>
-                        <div class="cert-issuer">Udemy / Makeintern</div>
-                        <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px;">Issued March 16, 2024 • UC-7d9cb802</div>
-                    </div>
-                    <a href="https://ude.my/UC-7d9cb802-437b-46c8-9e16-03aa607b1c6b" target="_blank" rel="noopener noreferrer" class="cert-verify-btn">
-                        <span>Verify Credential</span>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="7" y1="17" x2="17" y2="7"></line>
-                            <polyline points="7 7 17 7 17 17"></polyline>
-                        </svg>
-                    </a>
-                </div>
-
-                <!-- Cert 5 -->
-                <div class="cert-card" data-cert="wadhwani" data-title="21st Century Employability Skilling Program - Advanced" data-img="assets/images/cert-wadhwani.jpg" data-url="https://opportunity.wfglobal.org" data-detail="Advanced Skilling Program Certificate from Wadhwani Foundation in collaboration with Bangabandhu Sheikh Mujibur Rahman Digital University. Issued January 18, 2024.">
-                    <div class="cert-image-box">
-                        <img src="assets/images/cert-wadhwani.jpg" alt="Wadhwani Foundation Advanced Skilling Certificate">
-                        <div class="cert-overlay-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                                <line x1="11" y1="8" x2="11" y2="14"></line>
-                                <line x1="8" y1="11" x2="14" y2="11"></line>
-                            </svg>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="cert-title">21st Century Employability (Advanced)</h3>
-                        <div class="cert-issuer">Wadhwani Foundation & BSMRDU</div>
-                        <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px;">Issued January 18, 2024</div>
-                    </div>
-                    <a href="https://opportunity.wfglobal.org" target="_blank" rel="noopener noreferrer" class="cert-verify-btn">
-                        <span>Verify Credential</span>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="7" y1="17" x2="17" y2="7"></line>
-                            <polyline points="7 7 17 7 17 17"></polyline>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 07: Achievements & Volunteer -->
-    <section class="section" id="achievements">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-index-wrapper">
-                    <span class="section-number">07</span>
-                    <div class="section-line"></div>
-                </div>
-                <h2 class="section-title">Achievements & Volunteer</h2>
-                <p class="section-subtitle">Recognitions, competition achievements, and community engagement</p>
-            </div>
-
-            <div class="certifications-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin: 0 auto;">
-                <!-- Achievement 1 -->
-                <div class="cert-card" data-cert="beo2024" data-title="Bangladesh Environment Olympiad 2024" data-img="assets/images/award-environment.jpg" data-detail="Certificate of Participation (Group C) in Bangladesh Environment Olympiad 2024 held on 12 January 2024. Organized by School of Hidden Talent, Ecoeen, TriDeshi-Ecoeen & Eco Volunteers.">
-                    <div class="cert-image-box">
-                        <img src="assets/images/award-environment.jpg" alt="Bangladesh Environment Olympiad 2024 Certificate">
-                        <div class="cert-overlay-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                                <line x1="11" y1="8" x2="11" y2="14"></line>
-                                <line x1="8" y1="11" x2="14" y2="11"></line>
-                            </svg>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="cert-title">Bangladesh Environment Olympiad 2024</h3>
-                        <div class="cert-issuer">Ecoeen & School of Hidden Talent</div>
-                        <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px;">Held January 12, 2024</div>
-                    </div>
-                    <a href="#" class="cert-verify-btn">
-                        <span>View Certificate</span>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="7" y1="17" x2="17" y2="7"></line>
-                            <polyline points="7 7 17 7 17 17"></polyline>
-                        </svg>
-                    </a>
-                </div>
-
-                <!-- Achievement 2 / Volunteer -->
-                <div class="cert-card" data-cert="steam-vol" data-title="National STEAM Olympiad Executive Volunteer" data-img="assets/images/volunteer-steam.jpg" data-detail="Official Volunteer Badge for National STEAM Olympiad representing Bangabandhu Sheikh Mujibur Rahman Digital University (BSMRDU), Gazipur, Dhaka.">
-                    <div class="cert-image-box">
-                        <img src="assets/images/volunteer-steam.jpg" alt="National STEAM Olympiad Volunteer Badge">
-                        <div class="cert-overlay-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                                <line x1="11" y1="8" x2="11" y2="14"></line>
-                                <line x1="8" y1="11" x2="14" y2="11"></line>
-                            </svg>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="cert-title">Executive Volunteer</h3>
-                        <div class="cert-issuer">National STEAM Olympiad</div>
-                        <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px;">iTesseract & BSMRDU</div>
-                    </div>
-                    <a href="#" class="cert-verify-btn">
-                        <span>View Volunteer Badge</span>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="7" y1="17" x2="17" y2="7"></line>
-                            <polyline points="7 7 17 7 17 17"></polyline>
-                        </svg>
-                    </a>
-                </div>
-
-                <!-- Achievement 3 -->
-                <div class="cert-card" data-cert="google-gen-ai" data-title="Introduction to Generative AI" data-img="assets/images/google-badge-intro-to-gen-ai.png" data-detail="Google Cloud Skill Badge for Introduction to Generative AI.">
-                    <div class="cert-image-box">
-                        <img src="assets/images/google-badge-intro-to-gen-ai.png" alt="Google Introduction to Generative AI Badge">
-                        <div class="cert-overlay-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                                <line x1="11" y1="8" x2="11" y2="14"></line>
-                                <line x1="8" y1="11" x2="14" y2="11"></line>
-                            </svg>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="cert-title">Introduction to Generative AI</h3>
-                        <div class="cert-issuer">Google Cloud</div>
-                        <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px;">Skill Badge</div>
-                    </div>
-                    <a href="#" class="cert-verify-btn">
-                        <span>View Badge</span>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="7" y1="17" x2="17" y2="7"></line>
-                            <polyline points="7 7 17 7 17 17"></polyline>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 08: Let's Connect & Footer -->
-    <section class="section" id="contact">
-        <div class="container">
-            <div class="section-header" style="margin-bottom: 32px;">
-                <div class="section-index-wrapper" style="justify-content: center;">
-                    <span class="section-number">08</span>
-                    <div class="section-line"></div>
-                </div>
-            </div>
-
-            <div class="contact-card-box">
-                <h2 class="contact-title">Let's Connect</h2>
-                <p class="contact-sub">
-                    Feel free to reach out for research collaborations, artificial intelligence projects, or digital strategy opportunities.
-                </p>
-
-                <div class="contact-links-grid">
-                    <a href="mailto:dhrobosaikat4@gmail.com" class="contact-button">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                        Email Me
-                    </a>
-
-                    <a href="https://linkedin.com/in/jakaria-saikat-dhrobo" target="_blank" rel="noopener noreferrer" class="contact-button">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                        </svg>
-                        LinkedIn
-                    </a>
-
-                    <a href="https://github.com/saikatdhrobo" target="_blank" rel="noopener noreferrer" class="contact-button">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                        GitHub
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-content">
-            <div class="footer-copy">
-                © 2026 Jakaria Saikat Dhrobo. All rights reserved.
-            </div>
-            <a href="#hero" style="color: var(--accent); font-weight: 600;">
-                Back to Top ↑
-            </a>
-        </div>
-    </footer>
-
-    <!-- Certificate Modal Lightbox -->
-    <div class="modal-overlay" id="certModal">
-        <div class="modal-content">
-            <span class="modal-close" id="modalClose">&times;</span>
-            <h3 id="modalTitle" style="font-size: 1.4rem; font-weight: 700; color: var(--text-primary); margin-bottom: 12px;"></h3>
-            <div id="modalBody"></div>
-        </div>
+        <a href="https://github.com/saikatdhrobo" target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#f0f2f5] hover:bg-[#e4e6eb] text-[#050505] font-semibold text-[13px] border border-[#d8dadf] transition-all">
+          <span class="material-symbols-outlined text-[18px]">terminal</span>
+          <span class="hidden sm:inline">GitHub</span>
+        </a>
+        <a href="assets/resume/Jakaria_Saikat_Dhrobo_Resume.pdf" download
+          class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-[#0866ff] hover:bg-[#1877f2] text-white font-semibold text-[13px] shadow-sm transition-all">
+          <span class="material-symbols-outlined text-[18px]">description</span>
+          <span>Resume</span>
+        </a>
+        <!-- Mobile Toggle Button -->
+        <button id="mobileMenuBtn" aria-label="Toggle navigation menu"
+          class="lg:hidden p-2 rounded-lg bg-[#f0f2f5] hover:bg-[#e4e6eb] text-[#050505]">
+          <span class="material-symbols-outlined text-[22px]">menu</span>
+        </button>
+      </div>
     </div>
 
-    <!-- JavaScript Controller -->
-    <script src="js/main.js"></script>
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-[#e4e6eb] px-4 py-3 space-y-2 shadow-lg">
+      <button class="dark-mode-toggle flex items-center gap-2 w-full text-left px-3 py-2 rounded-lg hover:bg-[#f0f2f5] text-[#050505] font-medium text-[14px]">
+        <span class="material-symbols-outlined text-[18px] text-[#0866ff]">dark_mode</span>
+        <span>Toggle Dark / Light Theme</span>
+      </button>
+      <a href="#about"
+        class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-[#f0f2f5] text-[#050505] font-medium text-[14px]">
+        <span class="material-symbols-outlined text-[18px] text-[#0866ff]">person</span>
+        <span>About & Intro</span>
+      </a>
+      <a href="#skills"
+        class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-[#f0f2f5] text-[#050505] font-medium text-[14px]">
+        <span class="material-symbols-outlined text-[18px] text-[#0866ff]">code</span>
+        <span>Technical Skills</span>
+      </a>
+      <a href="#publications"
+        class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-[#f0f2f5] text-[#050505] font-medium text-[14px]">
+        <span class="material-symbols-outlined text-[18px] text-[#0866ff]">menu_book</span>
+        <span>Publications</span>
+      </a>
+      <a href="#projects"
+        class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-[#f0f2f5] text-[#050505] font-medium text-[14px]">
+        <span class="material-symbols-outlined text-[18px] text-[#0866ff]">folder_special</span>
+        <span>Projects</span>
+      </a>
+      <a href="#experience"
+        class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-[#f0f2f5] text-[#050505] font-medium text-[14px]">
+        <span class="material-symbols-outlined text-[18px] text-[#0866ff]">history_edu</span>
+        <span>Experience</span>
+      </a>
+      <a href="#certifications"
+        class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-[#f0f2f5] text-[#050505] font-medium text-[14px]">
+        <span class="material-symbols-outlined text-[18px] text-[#0866ff]">verified</span>
+        <span>Certifications</span>
+      </a>
+      <a href="#achievements"
+        class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-[#f0f2f5] text-[#050505] font-medium text-[14px]">
+        <span class="material-symbols-outlined text-[18px] text-[#0866ff]">military_tech</span>
+        <span>Achievements</span>
+      </a>
+      <a href="#connect"
+        class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-[#f0f2f5] text-[#050505] font-medium text-[14px]">
+        <span class="material-symbols-outlined text-[18px] text-[#0866ff]">contact_mail</span>
+        <span>Let's Connect</span>
+      </a>
+    </div>
+  </header>
 
+  <!-- MAIN VIEWPORT CONTAINER -->
+  <main class="w-full pt-14 pb-2" id="top">
+    <div class="max-w-[1140px] mx-auto px-2 sm:px-4">
+
+      <!-- ==================== PROFILE HEADER SECTION ==================== -->
+      <section class="bg-white rounded-b-xl shadow-sm overflow-hidden mb-4 border border-t-0 border-[#e4e6eb] fb-card">
+        <!-- Cover Banner Image -->
+        <div
+          class="relative w-full h-[140px] sm:h-[180px] md:h-[220px] bg-[#1e293b] overflow-hidden">
+          <img src="assets/images/cover-portfolio.png" alt="Jakaria Saikat Dhrobo Cover Photo"
+            class="w-full h-full object-cover zoomable-image cursor-pointer" />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none">
+          </div>
+
+          <div class="absolute bottom-3 right-3 flex items-center gap-2">
+            <span
+              class="px-3 py-1 rounded-full bg-black/60 backdrop-blur text-white text-[12px] font-medium italic shadow-sm flex items-center gap-1.5 border border-white/20">
+              <span>❝ Try to make myself unique ❞</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Identity Bar & Action Row -->
+        <div class="px-4 sm:px-8 pb-4">
+          <div
+            class="flex flex-col lg:flex-row items-center lg:items-end justify-between gap-4 -mt-16 sm:-mt-20 lg:-mt-14 relative z-10">
+            <!-- Avatar & Personal Bio Headline -->
+            <div class="flex flex-col sm:flex-row items-center sm:items-end gap-4 sm:gap-6 text-center sm:text-left">
+              <!-- Profile Avatar -->
+              <div class="relative flex-shrink-0">
+                <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-full p-1 bg-white shadow-md relative">
+                  <img src="assets/images/profile.jpg" alt="Jakaria Saikat Dhrobo"
+                    class="w-full h-full rounded-full object-cover zoomable-image" />
+                  <!-- Online Active Status -->
+                  <span
+                    class="absolute bottom-3 right-3 w-5 h-5 bg-[#31a24c] border-[3px] border-white rounded-full pulse-green"
+                    title="Open to Opportunities"></span>
+                </div>
+              </div>
+
+              <!-- Name and Meta Badges -->
+              <div class="space-y-1 sm:pb-3">
+                <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+                  <h1 class="text-2xl sm:text-3xl font-bold text-[#050505] tracking-tight">Jakaria Saikat Dhrobo</h1>
+                  <span class="material-symbols-outlined text-[#0866ff] text-[22px]"
+                    style="font-variation-settings: 'FILL' 1;" title="Verified Researcher">verified</span>
+                </div>
+
+                <div class="flex items-center justify-center sm:justify-start gap-2 flex-wrap">
+                  <p class="text-[15px] font-semibold text-[#0866ff]">Research Assistant & AI Engineer</p>
+                  <!-- <span class="text-[#65676b]">•</span> -->
+                  <!-- <span class="text-[13.5px] italic text-[#65676b] font-medium">“Try to make myself unique”</span> -->
+                </div>
+
+                <div class="flex flex-wrap items-center justify-center sm:justify-start gap-1.5 pt-1.5">
+                  <span
+                    class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#e7f3ff] text-[#0866ff] text-[12px] font-semibold">
+                    <span class="material-symbols-outlined text-[13px]">menu_book</span> 1 Publication
+                  </span>
+                  <span
+                    class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#f0f2f5] text-[#050505] text-[12px] font-medium">
+                    <span class="material-symbols-outlined text-[13px] text-[#65676b]">folder</span> 3 Projects
+                  </span>
+                  <span
+                    class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#f0f2f5] text-[#050505] text-[12px] font-medium">
+                    <span class="material-symbols-outlined text-[13px] text-[#65676b]">work</span> 4 Positions
+                  </span>
+                  <span
+                    class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#f0f2f5] text-[#050505] text-[12px] font-medium">
+                    <span class="material-symbols-outlined text-[13px] text-[#65676b]">verified</span> 6 Certifications
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Profile Primary CTAs -->
+            <div class="flex items-center flex-wrap justify-center gap-2.5 pb-3 w-full lg:w-auto">
+              <a href="assets/resume/Jakaria_Saikat_Dhrobo_Resume.pdf" download
+                class="flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg bg-[#0866ff] hover:bg-[#1877f2] text-white font-semibold text-[14px] shadow-sm transition-all">
+                <span class="material-symbols-outlined text-[18px]">download</span>
+                <span>Download Resume</span>
+              </a>
+              <a href="#connect"
+                class="flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg bg-[#e4e6eb] hover:bg-[#d8dadf] text-[#050505] dark:bg-[#3a3b3c] dark:hover:bg-[#4e4f50] dark:text-[#e4e6eb] font-semibold text-[14px] transition-all">
+                <span class="material-symbols-outlined text-[18px]">mail</span>
+                <span>Contact Me</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Divider -->
+          <div class="w-full h-px bg-[#e4e6eb] mt-4 mb-1"></div>
+
+          <!-- Profile Horizontal Segmented Navigation Tabs Bar -->
+          <div class="flex items-center justify-between overflow-x-auto no-scrollbar pt-1 profile-tab-bar">
+            <div class="flex items-center gap-1 min-w-max text-[14px] font-semibold text-[#65676b]">
+              <a href="#top"
+                class="px-4 py-3 text-[#0866ff] border-b-[3px] border-[#0866ff] transition-all nav-tab active">Overview</a>
+              <a href="#about" class="px-4 py-3 hover:bg-[#f0f2f5] rounded-lg transition-colors nav-tab">About</a>
+              <a href="#skills" class="px-4 py-3 hover:bg-[#f0f2f5] rounded-lg transition-colors nav-tab">Technical
+                Skills</a>
+              <a href="#publications"
+                class="px-4 py-3 hover:bg-[#f0f2f5] rounded-lg transition-colors nav-tab">Publications</a>
+              <a href="#projects" class="px-4 py-3 hover:bg-[#f0f2f5] rounded-lg transition-colors nav-tab">Projects</a>
+              <a href="#experience"
+                class="px-4 py-3 hover:bg-[#f0f2f5] rounded-lg transition-colors nav-tab">Experience</a>
+              <a href="#certifications"
+                class="px-4 py-3 hover:bg-[#f0f2f5] rounded-lg transition-colors nav-tab">Certifications</a>
+              <a href="#achievements"
+                class="px-4 py-3 hover:bg-[#f0f2f5] rounded-lg transition-colors nav-tab">Achievements</a>
+              <a href="#connect" class="px-4 py-3 hover:bg-[#f0f2f5] rounded-lg transition-colors nav-tab">Let's
+                Connect</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MAIN 2-COLUMN FACEBOOK DUAL LAYOUT -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+
+        <!-- ==================== LEFT COLUMN (CONTEXT & INTRO SIDEBAR) ==================== -->
+        <div class="lg:col-span-5 space-y-4">
+
+          <!-- CARD 1: 01 ABOUT / INTRO -->
+          <section id="about" class="bg-white rounded-xl p-4 shadow-sm border border-[#e4e6eb] space-y-3 fb-card">
+            <div class="flex items-center justify-between pb-1 border-b border-[#e4e6eb]">
+              <h2 class="text-[17px] font-bold text-[#050505]">About & Intro</h2>
+              <span class="text-[12px] font-semibold text-[#0866ff] bg-[#e7f3ff] px-2 py-0.5 rounded">Bio
+                Overview</span>
+            </div>
+            <p class="text-[14px] text-[#050505] leading-relaxed text-justify">
+              I am a technology researcher and engineering student with interests in artificial intelligence,
+              intelligent systems, research, and digital growth. My work focuses on learning, exploring, and applying
+              technology to practical problems through research and continuous experimentation.
+            </p>
+            <div class="pt-2 border-t border-[#e4e6eb] space-y-2.5 text-[14px] text-[#050505]">
+              <div class="flex items-start gap-2.5">
+                <span
+                  class="material-symbols-outlined text-[#65676b] text-[20px] flex-shrink-0 mt-0.5">psychology</span>
+                <div>
+                  <span class="font-medium text-[#65676b]">Focus Areas:</span>
+                  <p class="font-semibold text-[#050505]">IoT, Embedded Telemetry, Agentic AI, Model Optimization</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span
+                  class="material-symbols-outlined text-[#65676b] text-[20px] flex-shrink-0 mt-0.5">location_on</span>
+                <div>
+                  <span class="font-medium text-[#65676b]">Base:</span>
+                  <p class="font-semibold text-[#050505]">Narsingdi, Dhaka, Bangladesh</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- CARD 2: WORK & EDUCATION HISTORY -->
+          <section class="bg-white rounded-xl p-4 shadow-sm border border-[#e4e6eb] space-y-3.5 fb-card">
+            <h2 class="text-[17px] font-bold text-[#050505] pb-1 border-b border-[#e4e6eb]">Work & Education History
+            </h2>
+            <div class="space-y-3 text-[13.5px]">
+              <!-- Work 1 -->
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-[#0866ff] text-[20px] flex-shrink-0 mt-0.5">work</span>
+                <div>
+                  <p class="text-[#050505]">
+                    Works as <span class="font-bold">Research Assistant</span> at
+                    <span class="font-semibold text-[#050505]">University of Frontier Technology, Bangladesh
+                      (UFTB)</span>
+                  </p>
+                  <p class="text-[12px] text-[#65676b]">Supervisor: Md. Rafiqul Islam</p>
+                </div>
+              </div>
+              <!-- Work 2 -->
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-[#65676b] text-[20px] flex-shrink-0 mt-0.5">smart_toy</span>
+                <div>
+                  <p class="text-[#050505]">
+                    Former <span class="font-bold">Backend AI Engineering Intern</span> at
+                    <span class="font-semibold text-[#050505]">FlyRank</span>
+                  </p>
+                </div>
+              </div>
+              <!-- Work 3 -->
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-[#65676b] text-[20px] flex-shrink-0 mt-0.5">article</span>
+                <div>
+                  <p class="text-[#050505]">
+                    Former <span class="font-bold">Publications Assistant</span> at
+                    <span class="font-semibold text-[#050505]">UFTB Robotics Club</span>
+                  </p>
+                </div>
+              </div>
+              <!-- Work 4 -->
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-[#65676b] text-[20px] flex-shrink-0 mt-0.5">campaign</span>
+                <div>
+                  <p class="text-[#050505]">
+                    Former <span class="font-bold">Digital Marketing Intern</span> at
+                    <span class="font-semibold text-[#050505]">GAOTek Inc.</span>
+                  </p>
+                </div>
+              </div>
+              <!-- Edu 1 -->
+              <div class="flex items-start gap-3 pt-1 border-t border-[#f0f2f5]">
+                <span class="material-symbols-outlined text-[#0866ff] text-[20px] flex-shrink-0 mt-0.5">school</span>
+                <div>
+                  <p class="text-[#050505]">
+                    Studies <span class="font-bold">B.Sc. in IoT & Robotics Engineering</span> at
+                    <span class="font-semibold text-[#050505]">University of Frontier Technology, Bangladesh</span>
+                  </p>
+                  <p class="text-[12px] text-[#65676b]">2022 – Present</p>
+                </div>
+              </div>
+              <!-- Edu 2 -->
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-[#65676b] text-[20px] flex-shrink-0 mt-0.5">apartment</span>
+                <div>
+                  <p class="text-[#050505]">
+                    Went to <span class="font-semibold">Abdul Kadir Mollah City College</span> (HSC 2018–2019) & <span
+                      class="font-semibold">NKM High School & Homes</span> (SSC 2018)
+                  </p>
+                </div>
+              </div>
+              <!-- Location -->
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-[#65676b] text-[20px] flex-shrink-0 mt-0.5">home</span>
+                <div>
+                  <p class="text-[#050505]">Lives in <span class="font-semibold">Narsingdi, Dhaka, Bangladesh</span></p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- CARD 3: 02 TECHNICAL SKILLS (CATEGORIZED NEATLY) -->
+          <section id="skills" class="bg-white rounded-xl p-4 shadow-sm border border-[#e4e6eb] space-y-3.5 fb-card">
+            <div class="flex items-center justify-between pb-1 border-b border-[#e4e6eb]">
+              <h2 class="text-[17px] font-bold text-[#050505]">Technical Skills</h2>
+              <span class="material-symbols-outlined text-[#0866ff] text-[18px]">code</span>
+            </div>
+
+            <!-- Category 1: AI & Machine Learning -->
+            <div class="space-y-1.5">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-[#65676b]">AI & Machine Learning</span>
+              <div class="flex flex-wrap gap-1.5">
+                <span
+                  class="px-2.5 py-1 rounded-md bg-[#f0f2f5] text-[#050505] text-[12.5px] font-medium hover:bg-[#e4e6eb] transition-colors">Python</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-[#f0f2f5] text-[#050505] text-[12.5px] font-medium hover:bg-[#e4e6eb] transition-colors">Machine
+                  Learning</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-[#f0f2f5] text-[#050505] text-[12.5px] font-medium hover:bg-[#e4e6eb] transition-colors">Deep
+                  Learning</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-[#f0f2f5] text-[#050505] text-[12.5px] font-medium hover:bg-[#e4e6eb] transition-colors">Model
+                  Optimization</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-[#f0f2f5] text-[#050505] text-[12.5px] font-medium hover:bg-[#e4e6eb] transition-colors">Intelligent
+                  Systems</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-[#f0f2f5] text-[#050505] text-[12.5px] font-medium hover:bg-[#e4e6eb] transition-colors">LLM</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-[#e7f3ff] text-[#0866ff] text-[12.5px] font-semibold hover:bg-[#d0e7ff] transition-colors">Agentic
+                  AI</span>
+              </div>
+            </div>
+
+            <!-- Category 2: Web & Backend -->
+            <div class="space-y-1.5 pt-1">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-[#65676b]">Web & Backend</span>
+              <div class="flex flex-wrap gap-1.5">
+                <span
+                  class="px-2.5 py-1 rounded-md bg-[#f0f2f5] text-[#050505] text-[12.5px] font-medium hover:bg-[#e4e6eb] transition-colors">HTML5
+                  / CSS3</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-[#f0f2f5] text-[#050505] text-[12.5px] font-medium hover:bg-[#e4e6eb] transition-colors">JavaScript</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-[#f0f2f5] text-[#050505] text-[12.5px] font-medium hover:bg-[#e4e6eb] transition-colors">Flask</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-[#f0f2f5] text-[#050505] text-[12.5px] font-medium hover:bg-[#e4e6eb] transition-colors">SQLAlchemy</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-[#f0f2f5] text-[#050505] text-[12.5px] font-medium hover:bg-[#e4e6eb] transition-colors">Relational
+                  Databases</span>
+              </div>
+            </div>
+
+            <!-- Category 3: Research & Writing -->
+            <div class="space-y-1.5 pt-1">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-[#65676b]">Research & Writing</span>
+              <div class="flex flex-wrap gap-1.5">
+                <span
+                  class="px-2.5 py-1 rounded-md bg-[#f0f2f5] text-[#050505] text-[12.5px] font-medium hover:bg-[#e4e6eb] transition-colors">Technical
+                  Writing</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-[#f0f2f5] text-[#050505] text-[12.5px] font-medium hover:bg-[#e4e6eb] transition-colors">Research
+                  Methodology</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-[#f0f2f5] text-[#050505] text-[12.5px] font-medium hover:bg-[#e4e6eb] transition-colors">Literature
+                  Analysis</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-[#f0f2f5] text-[#050505] text-[12.5px] font-medium hover:bg-[#e4e6eb] transition-colors">Academic
+                  Publishing</span>
+              </div>
+            </div>
+
+            <!-- Category 4: SEO & Digital Visibility -->
+            <div class="space-y-1.5 pt-1">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-[#65676b]">SEO & Digital
+                Visibility</span>
+              <div class="flex flex-wrap gap-1.5">
+                <span
+                  class="px-2.5 py-1 rounded-md bg-[#e7f3ff] text-[#0866ff] text-[12.5px] font-semibold hover:bg-[#d0e7ff] transition-colors">Semrush
+                  Certified</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-[#f0f2f5] text-[#050505] text-[12.5px] font-medium hover:bg-[#e4e6eb] transition-colors">Keyword
+                  Research</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-[#f0f2f5] text-[#050505] text-[12.5px] font-medium hover:bg-[#e4e6eb] transition-colors">Content
+                  Strategy</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-[#f0f2f5] text-[#050505] text-[12.5px] font-medium hover:bg-[#e4e6eb] transition-colors">Search
+                  Visibility</span>
+              </div>
+            </div>
+
+            <!-- Category 5: Tools & Environment -->
+            <div class="space-y-1.5 pt-1">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-[#65676b]">Tools & Environment</span>
+              <div class="flex flex-wrap gap-1.5">
+                <span
+                  class="px-2.5 py-1 rounded-md bg-[#f0f2f5] text-[#050505] text-[12.5px] font-medium hover:bg-[#e4e6eb] transition-colors">Git
+                  / GitHub</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-[#f0f2f5] text-[#050505] text-[12.5px] font-medium hover:bg-[#e4e6eb] transition-colors">VS
+                  Code</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-[#f0f2f5] text-[#050505] text-[12.5px] font-medium hover:bg-[#e4e6eb] transition-colors">Antigravity</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-[#f0f2f5] text-[#050505] text-[12.5px] font-medium hover:bg-[#e4e6eb] transition-colors">Zcode</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-[#f0f2f5] text-[#050505] text-[12.5px] font-medium hover:bg-[#e4e6eb] transition-colors">OmniRoute</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-[#f0f2f5] text-[#050505] text-[12.5px] font-medium hover:bg-[#e4e6eb] transition-colors">Google
+                  Search Console</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-[#f0f2f5] text-[#050505] text-[12.5px] font-medium hover:bg-[#e4e6eb] transition-colors">Google
+                  Analytics</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- CARD 4: 06 CERTIFICATIONS & CREDENTIALS -->
+          <section id="certifications"
+            class="bg-white rounded-xl p-4 shadow-sm border border-[#e4e6eb] space-y-3 fb-card">
+            <div class="flex items-center justify-between pb-2 border-b border-[#e4e6eb]">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-[#0866ff] text-[20px]">verified</span>
+                <h2 class="text-[17px] font-bold text-[#050505]">Certifications & Credentials</h2>
+              </div>
+              <span class="text-[12px] font-semibold text-[#0866ff] bg-[#e7f3ff] px-2.5 py-0.5 rounded-full">6
+                Verified</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+              <!-- Cert 1 -->
+              <div class="p-3 rounded-xl bg-[#f8f9fa] border border-[#e4e6eb] flex flex-col justify-between space-y-2.5"
+                data-lightbox-src="assets/images/cert-ai-fluency.jpg"
+                data-title="AI Fluency: Framework & Foundations — Anthropic">
+                <div class="space-y-1">
+                  <div class="flex items-start justify-between gap-1">
+                    <h3 class="font-bold text-[13.5px] text-[#050505] leading-snug">AI Fluency: Framework & Foundations
+                    </h3>
+                    <span
+                      class="px-2 py-0.5 rounded text-[11px] font-semibold bg-[#e7f3ff] text-[#0866ff] flex-shrink-0">Anthropic</span>
+                  </div>
+                  <p class="text-[#65676b] text-[12px]">Credential ID: <span
+                      class="font-mono text-[#050505] font-medium">78xs6rpbojjt</span></p>
+                </div>
+                <div
+                  class="w-full h-24 rounded-lg overflow-hidden border border-[#e4e6eb] relative group cursor-pointer">
+                  <img src="assets/images/cert-ai-fluency.jpg" alt="AI Fluency Certificate"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <div
+                    class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-[12px] font-semibold gap-1">
+                    <span class="material-symbols-outlined text-[16px]">visibility</span> Click to Expand
+                  </div>
+                </div>
+                <a href="https://verify.skilljar.com/c/78xs6rpbojjt" target="_blank" rel="noopener noreferrer"
+                  class="inline-flex items-center justify-center gap-1.5 w-full py-1.5 px-3 rounded-lg bg-white hover:bg-[#e4e6eb] text-[#0866ff] border border-[#d8dadf] text-[12px] font-semibold transition-colors shadow-sm">
+                  <span>Verify Credential</span>
+                  <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+                </a>
+              </div>
+
+              <!-- Cert 2 -->
+              <div class="p-3 rounded-xl bg-[#f8f9fa] border border-[#e4e6eb] flex flex-col justify-between space-y-2.5"
+                data-lightbox-src="assets/images/cert-claude.jpg" data-title="Claude Code in Action — Anthropic">
+                <div class="space-y-1">
+                  <div class="flex items-start justify-between gap-1">
+                    <h3 class="font-bold text-[13.5px] text-[#050505] leading-snug">Claude Code in Action</h3>
+                    <span
+                      class="px-2 py-0.5 rounded text-[11px] font-semibold bg-[#e7f3ff] text-[#0866ff] flex-shrink-0">Anthropic</span>
+                  </div>
+                  <p class="text-[#65676b] text-[11.5px]">Issued May 19, 2026</p>
+                  <p class="text-[#65676b] text-[12px]">Credential ID: <span
+                      class="font-mono text-[#050505] font-medium">9x9bedr8ojhh</span></p>
+                </div>
+                <div
+                  class="w-full h-24 rounded-lg overflow-hidden border border-[#e4e6eb] relative group cursor-pointer">
+                  <img src="assets/images/cert-claude.jpg" alt="Claude Code in Action Certificate"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <div
+                    class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-[12px] font-semibold gap-1">
+                    <span class="material-symbols-outlined text-[16px]">visibility</span> Click to Expand
+                  </div>
+                </div>
+                <a href="https://verify.skilljar.com/c/9x9bedr8ojhh" target="_blank" rel="noopener noreferrer"
+                  class="inline-flex items-center justify-center gap-1.5 w-full py-1.5 px-3 rounded-lg bg-white hover:bg-[#e4e6eb] text-[#0866ff] border border-[#d8dadf] text-[12px] font-semibold transition-colors shadow-sm">
+                  <span>Verify Credential</span>
+                  <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+                </a>
+              </div>
+
+              <!-- Cert 3 -->
+              <div class="p-3 rounded-xl bg-[#f8f9fa] border border-[#e4e6eb] flex flex-col justify-between space-y-2.5"
+                data-lightbox-src="assets/images/cert-semrush.jpg"
+                data-title="Semrush SEO Crash Course — Semrush Academy">
+                <div class="space-y-1">
+                  <div class="flex items-start justify-between gap-1">
+                    <h3 class="font-bold text-[13.5px] text-[#050505] leading-snug">Semrush SEO Crash Course</h3>
+                    <span
+                      class="px-2 py-0.5 rounded text-[11px] font-semibold bg-[#e7f3ff] text-[#0866ff] flex-shrink-0">Semrush</span>
+                  </div>
+                  <p class="text-[#65676b] text-[11.5px]">Valid thru June 2027</p>
+                  <p class="text-[#65676b] text-[12px]">Credential ID: <span
+                      class="font-mono text-[#050505] font-medium">b25f095d67</span></p>
+                </div>
+                <div
+                  class="w-full h-24 rounded-lg overflow-hidden border border-[#e4e6eb] relative group cursor-pointer">
+                  <img src="assets/images/cert-semrush.jpg" alt="Semrush SEO Crash Course Certificate"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <div
+                    class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-[12px] font-semibold gap-1">
+                    <span class="material-symbols-outlined text-[16px]">visibility</span> Click to Expand
+                  </div>
+                </div>
+                <button
+                  class="inline-flex items-center justify-center gap-1.5 w-full py-1.5 px-3 rounded-lg bg-white hover:bg-[#e4e6eb] text-[#0866ff] border border-[#d8dadf] text-[12px] font-semibold transition-colors shadow-sm">
+                  <span>View Certificate</span>
+                  <span class="material-symbols-outlined text-[14px]">visibility</span>
+                </button>
+              </div>
+
+              <!-- Cert 4 -->
+              <div class="p-3 rounded-xl bg-[#f8f9fa] border border-[#e4e6eb] flex flex-col justify-between space-y-2.5"
+                data-lightbox-src="assets/images/cert-iot.jpg"
+                data-title="Internet of Things (IoT) Course — Makeintern">
+                <div class="space-y-1">
+                  <div class="flex items-start justify-between gap-1">
+                    <h3 class="font-bold text-[13.5px] text-[#050505] leading-snug">Internet of Things (IoT) Course</h3>
+                    <span
+                      class="px-2 py-0.5 rounded text-[11px] font-semibold bg-[#e7f3ff] text-[#0866ff] flex-shrink-0">Makeintern</span>
+                  </div>
+                  <p class="text-[#65676b] text-[11.5px]">Issued March 16, 2024</p>
+                  <p class="text-[#65676b] text-[12px]">Credential ID: <span
+                      class="font-mono text-[#050505] font-medium">UC-7d9cb802</span></p>
+                </div>
+                <div
+                  class="w-full h-24 rounded-lg overflow-hidden border border-[#e4e6eb] relative group cursor-pointer">
+                  <img src="assets/images/cert-iot.jpg" alt="Internet of Things IoT Certificate"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <div
+                    class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-[12px] font-semibold gap-1">
+                    <span class="material-symbols-outlined text-[16px]">visibility</span> Click to Expand
+                  </div>
+                </div>
+                <a href="https://ude.my/UC-7d9cb802-437b-46c8-9e16-03aa607b1c6b" target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center justify-center gap-1.5 w-full py-1.5 px-3 rounded-lg bg-white hover:bg-[#e4e6eb] text-[#0866ff] border border-[#d8dadf] text-[12px] font-semibold transition-colors shadow-sm">
+                  <span>Verify Credential</span>
+                  <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+                </a>
+              </div>
+
+              <!-- Cert 5 -->
+              <div class="p-3 rounded-xl bg-[#f8f9fa] border border-[#e4e6eb] flex flex-col justify-between space-y-2.5"
+                data-lightbox-src="assets/images/cert-wadhwani.jpg"
+                data-title="21st Century Employability (Advanced) — Wadhwani Foundation & BSMRDU">
+                <div class="space-y-1">
+                  <div class="flex items-start justify-between gap-1">
+                    <h3 class="font-bold text-[13.5px] text-[#050505] leading-snug">21st Century Employability</h3>
+                    <span
+                      class="px-2 py-0.5 rounded text-[11px] font-semibold bg-[#e7f3ff] text-[#0866ff] flex-shrink-0">BSMRDU</span>
+                  </div>
+                  <p class="text-[#65676b] text-[11.5px]">Issued Jan 18, 2024 • Wadhwani</p>
+                  <p class="text-[#31a24c] text-[12px] font-medium flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[14px]">check_circle</span> Verified Credential
+                  </p>
+                </div>
+                <div
+                  class="w-full h-24 rounded-lg overflow-hidden border border-[#e4e6eb] relative group cursor-pointer">
+                  <img src="assets/images/cert-wadhwani.jpg" alt="Wadhwani Advanced Certificate"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <div
+                    class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-[12px] font-semibold gap-1">
+                    <span class="material-symbols-outlined text-[16px]">visibility</span> Click to Expand
+                  </div>
+                </div>
+                <button
+                  class="inline-flex items-center justify-center gap-1.5 w-full py-1.5 px-3 rounded-lg bg-white hover:bg-[#e4e6eb] text-[#0866ff] border border-[#d8dadf] text-[12px] font-semibold transition-colors shadow-sm">
+                  <span>View Certificate</span>
+                  <span class="material-symbols-outlined text-[14px]">visibility</span>
+                </button>
+              </div>
+
+              <!-- Cert 6 -->
+              <div class="p-3 rounded-xl bg-[#f8f9fa] border border-[#e4e6eb] flex flex-col justify-between space-y-2.5"
+                data-lightbox-src="assets/images/google-badge-intro-to-gen-ai.png"
+                data-title="Intro to Generative AI — Google Cloud Certified">
+                <div class="space-y-1">
+                  <div class="flex items-start justify-between gap-1">
+                    <h3 class="font-bold text-[13.5px] text-[#050505] leading-snug">Intro to Generative AI</h3>
+                    <span
+                      class="px-2 py-0.5 rounded text-[11px] font-semibold bg-[#e7f3ff] text-[#0866ff] flex-shrink-0">Google
+                      Cloud</span>
+                  </div>
+                  <p class="text-[#65676b] text-[11.5px]">Official Skill Badge</p>
+                  <p class="text-[#31a24c] text-[12px] font-medium flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[14px]">verified</span> Google Cloud Certified
+                  </p>
+                </div>
+                <div
+                  class="w-full h-24 rounded-lg overflow-hidden border border-[#e4e6eb] relative group cursor-pointer flex items-center justify-center bg-white p-2">
+                  <img src="assets/images/google-badge-intro-to-gen-ai.png" alt="Google Generative AI Skill Badge"
+                    class="max-h-full object-contain group-hover:scale-105 transition-transform duration-300" />
+                  <div
+                    class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-[12px] font-semibold gap-1">
+                    <span class="material-symbols-outlined text-[16px]">visibility</span> Click to Expand
+                  </div>
+                </div>
+                <button
+                  class="inline-flex items-center justify-center gap-1.5 w-full py-1.5 px-3 rounded-lg bg-white hover:bg-[#e4e6eb] text-[#0866ff] border border-[#d8dadf] text-[12px] font-semibold transition-colors shadow-sm">
+                  <span>View Skill Badge</span>
+                  <span class="material-symbols-outlined text-[14px]">visibility</span>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <!-- CARD 5: 08 LET'S CONNECT -->
+          <section id="connect" class="bg-white rounded-xl p-4 shadow-sm border border-[#e4e6eb] space-y-3 fb-card">
+            <div class="flex items-center justify-between pb-1 border-b border-[#e4e6eb]">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-[#0866ff] text-[20px]">contact_mail</span>
+                <h2 class="text-[17px] font-bold text-[#050505]">Let's Connect</h2>
+              </div>
+              <span class="text-[12px] font-semibold text-[#0866ff] bg-[#e7f3ff] px-2 py-0.5 rounded">Social &
+                Direct</span>
+            </div>
+            <p class="text-[13px] text-[#65676b]">Feel free to reach out for research collaborations, engineering roles,
+              or consulting:</p>
+
+            <div class="grid grid-cols-1 gap-2 pt-1">
+              <!-- LinkedIn -->
+              <a href="https://linkedin.com/in/jakaria-saikat-dhrobo" target="_blank" rel="noopener noreferrer"
+                class="flex items-center justify-between p-2.5 rounded-lg bg-[#f0f2f5] hover:bg-[#e4e6eb] text-[#050505] transition-all group">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-9 h-9 rounded-full bg-[#0077b5] text-white flex items-center justify-center shadow-sm flex-shrink-0">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76c.92 0 1.66-.74 1.66-1.66 0-.92-.74-1.66-1.66-1.66-.92 0-1.66.74-1.66 1.66 0 .92.74 1.66 1.66 1.66m1.39 9.74v-8.37H5.07v8.37h2.78z" />
+                    </svg>
+                  </div>
+                  <div class="min-w-0">
+                    <div class="font-semibold text-[13.5px] text-[#050505]">LinkedIn</div>
+                    <div class="text-[12px] text-[#65676b] truncate">linkedin.com/in/jakaria-saikat-dhrobo</div>
+                  </div>
+                </div>
+                <span
+                  class="material-symbols-outlined text-[18px] text-[#65676b] group-hover:text-[#0866ff] transition-colors">arrow_forward</span>
+              </a>
+
+              <!-- GitHub -->
+              <a href="https://github.com/saikatdhrobo" target="_blank" rel="noopener noreferrer"
+                class="flex items-center justify-between p-2.5 rounded-lg bg-[#f0f2f5] hover:bg-[#e4e6eb] text-[#050505] transition-all group">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-9 h-9 rounded-full bg-[#24292e] text-white flex items-center justify-center shadow-sm flex-shrink-0">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z" />
+                    </svg>
+                  </div>
+                  <div class="min-w-0">
+                    <div class="font-semibold text-[13.5px] text-[#050505]">GitHub</div>
+                    <div class="text-[12px] text-[#65676b] truncate">github.com/saikatdhrobo</div>
+                  </div>
+                </div>
+                <span
+                  class="material-symbols-outlined text-[18px] text-[#65676b] group-hover:text-[#0866ff] transition-colors">arrow_forward</span>
+              </a>
+
+              <!-- Email -->
+              <a href="mailto:dhrobosaikat4@gmail.com"
+                class="flex items-center justify-between p-2.5 rounded-lg bg-[#f0f2f5] hover:bg-[#e4e6eb] text-[#050505] transition-all group">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-9 h-9 rounded-full bg-[#ea4335] text-white flex items-center justify-center shadow-sm flex-shrink-0">
+                    <span class="material-symbols-outlined text-[18px]">mail</span>
+                  </div>
+                  <div class="min-w-0">
+                    <div class="font-semibold text-[13.5px] text-[#050505]">Email</div>
+                    <div class="text-[12px] text-[#65676b] truncate">dhrobosaikat4@gmail.com</div>
+                  </div>
+                </div>
+                <span
+                  class="material-symbols-outlined text-[18px] text-[#65676b] group-hover:text-[#0866ff] transition-colors">arrow_forward</span>
+              </a>
+
+              <!-- Facebook -->
+              <a href="https://www.facebook.com/jsd.saikat.dhrobo/" target="_blank" rel="noopener noreferrer"
+                class="flex items-center justify-between p-2.5 rounded-lg bg-[#f0f2f5] hover:bg-[#e4e6eb] text-[#050505] transition-all group">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-9 h-9 rounded-full bg-[#0866ff] text-white flex items-center justify-center font-bold text-lg shadow-sm flex-shrink-0">
+                    f</div>
+                  <div class="min-w-0">
+                    <div class="font-semibold text-[13.5px] text-[#050505]">Facebook</div>
+                    <div class="text-[12px] text-[#65676b] truncate">MD Saikat Dhrobo</div>
+                  </div>
+                </div>
+                <span
+                  class="material-symbols-outlined text-[18px] text-[#65676b] group-hover:text-[#0866ff] transition-colors">arrow_forward</span>
+              </a>
+
+              <!-- Telegram -->
+              <a href="https://t.me/saikat2001022" target="_blank" rel="noopener noreferrer"
+                class="flex items-center justify-between p-2.5 rounded-lg bg-[#f0f2f5] hover:bg-[#e4e6eb] text-[#050505] transition-all group">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-9 h-9 rounded-full bg-[#0088cc] text-white flex items-center justify-center shadow-sm flex-shrink-0">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z" />
+                    </svg>
+                  </div>
+                  <div class="min-w-0">
+                    <div class="font-semibold text-[13.5px] text-[#050505]">Telegram</div>
+                    <div class="text-[12px] text-[#65676b] truncate">t.me/@saikat2001022</div>
+                  </div>
+                </div>
+                <span
+                  class="material-symbols-outlined text-[18px] text-[#65676b] group-hover:text-[#0866ff] transition-colors">arrow_forward</span>
+              </a>
+            </div>
+          </section>
+
+          <!-- Copyright Card Footer -->
+          <div class="px-2 text-[12px] text-[#65676b] text-center space-y-1">
+            <!-- <p>© 2026 Jakaria Saikat Dhrobo • Academic & Engineering Portfolio</p> -->
+          </div>
+        </div>
+
+        <!-- ==================== RIGHT COLUMN (CURATED FEED & TIMELINE) ==================== -->
+        <div class="lg:col-span-7 space-y-4">
+
+          <!-- SECTION POST 1: 03 PUBLICATIONS (PEER-REVIEWED) -->
+          <article id="publications"
+            class="bg-white rounded-xl shadow-sm border border-[#e4e6eb] overflow-hidden fb-card">
+            <!-- Pinned Publication Banner -->
+            <div class="px-4 py-2.5 bg-[#f0f2f5] border-b border-[#e4e6eb] flex items-center justify-between">
+              <div class="flex items-center gap-2 text-[#0866ff] font-bold text-[13px]">
+                <span class="material-symbols-outlined text-[17px]">push_pin</span>
+                <span>Publications — Peer-Reviewed Research Papers</span>
+              </div>
+              <span
+                class="px-2.5 py-0.5 rounded bg-white text-[#050505] text-[11px] font-semibold border border-[#e4e6eb]">IEEE
+                Xplore</span>
+            </div>
+
+            <!-- Post Meta Header -->
+            <div class="px-4 pt-3.5 pb-2 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <img src="assets/images/profile.jpg" alt="Jakaria Saikat Dhrobo"
+                  class="w-10 h-10 rounded-full object-cover border border-[#e4e6eb]" />
+                <div>
+                  <div class="text-[14px] font-bold text-[#050505]">
+                    Jakaria Saikat Dhrobo
+                    <span class="font-normal text-[#65676b]"> • Published </span>
+                    <span class="text-[#050505]">Jan 2026</span>
+                  </div>
+                  <div class="flex items-center gap-1.5 text-[12px] text-[#65676b]">
+                    <span class="font-semibold text-[#0866ff]">IEEE ICECTE 2026</span>
+                    <span>•</span>
+                    <span>Rajshahi, Bangladesh</span>
+                    <span>•</span>
+                    <span class="material-symbols-outlined text-[13px]" title="Peer-reviewed publication">public</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Content Description -->
+            <div class="px-4 py-2 text-[14px] text-[#050505] space-y-2">
+              <p class="leading-relaxed">
+                Presented and published our peer-reviewed research paper introducing a smart medical telemetric
+                architecture:
+              </p>
+            </div>
+
+            <!-- Academic Publication Preview Box -->
+            <div class="m-4 rounded-xl border border-[#e4e6eb] bg-[#f8f9fa] overflow-hidden">
+              <div class="bg-[#004f83] text-white p-4">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="px-2.5 py-0.5 rounded bg-white/20 text-[11px] font-bold tracking-wide uppercase">IEEE
+                    ICECTE Proceedings</span>
+                  <span class="text-[12px] font-mono opacity-80">Rajshahi, BD</span>
+                </div>
+                <h3 class="text-[16px] sm:text-[18px] font-bold leading-snug">
+                  An Intelligent IoT-Enabled Automated Medicine Dispensing and Health Management System
+                </h3>
+              </div>
+
+              <!-- Paper Screenshot / Image Attachment -->
+              <div class="w-full bg-[#0f172a] relative overflow-hidden group cursor-pointer"
+                data-lightbox-src="assets/images/ieee-publication.jpg" data-title="IEEE Publication Screenshot">
+                <img src="assets/images/ieee-publication.jpg" alt="IEEE Publication Screenshot"
+                  class="w-full max-h-[320px] object-cover group-hover:scale-102 transition-transform duration-300" />
+                <div
+                  class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-[13px] font-semibold gap-1.5">
+                  <span class="material-symbols-outlined text-[20px]">zoom_in</span> Click to Enlarge Paper Preview
+                </div>
+              </div>
+
+              <div class="p-4 bg-white space-y-3">
+                <p class="text-[13px] text-[#65676b] leading-relaxed">
+                  Focuses on automated medication dispensing schedules, fail-safe dosage logic, sensor telemetric
+                  capture, and secure healthcare provider alerts to improve medication adherence and patient telemetry.
+                </p>
+                <div class="pt-2 border-t border-[#e4e6eb] flex flex-wrap items-center justify-between gap-2">
+                  <div class="flex items-center gap-1.5 text-[12.5px] font-semibold text-[#0866ff]">
+                    <span class="material-symbols-outlined text-[16px]">link</span>
+                    <span>DOI: 10.1109/ICECTE.2026.0148</span>
+                  </div>
+                  <a href="https://ieeexplore.ieee.org" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-lg bg-[#0866ff] hover:bg-[#1877f2] text-white font-semibold text-[13px] transition-colors shadow-sm">
+                    <span>Read Paper / DOI</span>
+                    <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- SECTION POST 2: 04 FEATURED PROJECTS - Reforge -->
+          <article id="projects" class="bg-white rounded-xl shadow-sm border border-[#e4e6eb] overflow-hidden fb-card">
+            <!-- Header -->
+            <div class="px-4 py-2.5 bg-[#f0f2f5] border-b border-[#e4e6eb] flex items-center justify-between">
+              <div class="flex items-center gap-2 text-[#0866ff] font-bold text-[13px]">
+                <span class="material-symbols-outlined text-[17px]">folder_special</span>
+                <span>Featured Projects — reforge</span>
+              </div>
+              <span
+                class="px-2.5 py-0.5 rounded bg-white text-[#050505] text-[11px] font-semibold border border-[#e4e6eb]">Systems & Tooling</span>
+            </div>
+
+            <!-- Post Meta -->
+            <div class="px-4 pt-3.5 pb-2 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <img src="assets/images/profile.jpg" alt="Jakaria Saikat Dhrobo"
+                  class="w-10 h-10 rounded-full object-cover border border-[#e4e6eb]" />
+                <div>
+                  <div class="text-[14px] font-bold text-[#050505]">
+                    Jakaria Saikat Dhrobo
+                    <span class="font-normal text-[#65676b]"> added a Featured Project • </span>
+                    <span class="text-[#050505]">Code Refactoring & Optimization Engine</span>
+                  </div>
+                  <div class="text-[12px] text-[#65676b]">Developer Tooling & System Performance</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Description & Bullet Points -->
+            <div class="px-4 py-2 text-[14px] text-[#050505] space-y-2.5">
+              <p class="leading-relaxed">
+                Automated code transformation and system refactoring framework designed for codebase maintenance, automated optimization pipelines, and developer CLI tooling.
+              </p>
+              <ul
+                class="space-y-1.5 text-[13.5px] text-[#050505] list-disc list-inside bg-[#f8f9fa] p-3 rounded-lg border border-[#e4e6eb]/60">
+                <li><span class="font-semibold">Automated code transformation & refactoring pipelines</span></li>
+                <li><span class="font-semibold">Performance benchmarking & runtime resource optimization</span></li>
+                <li><span class="font-semibold">Modular developer CLI & extensible API architecture</span></li>
+              </ul>
+              <!-- Tech Tags -->
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                <span class="px-2.5 py-0.5 rounded-full bg-[#f0f2f5] text-[#050505] text-[12px] font-semibold">Python</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-[#f0f2f5] text-[#050505] text-[12px] font-semibold">Refactoring Engine</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-[#f0f2f5] text-[#050505] text-[12px] font-semibold">CLI Tooling</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-[#f0f2f5] text-[#050505] text-[12px] font-semibold">System Optimization</span>
+              </div>
+            </div>
+
+            <!-- Link Preview Box -->
+            <div class="p-3.5 bg-[#f0f2f5] border-t border-[#e4e6eb] flex items-center justify-between gap-3">
+              <div class="min-w-0">
+                <div class="text-[11px] font-bold text-[#65676b] uppercase flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[13px]">code</span>
+                  <span>github.com/saikatdhrobo</span>
+                </div>
+                <h4 class="text-[14px] font-bold text-[#050505] truncate">reforge</h4>
+                <p class="text-[12px] text-[#65676b] truncate">Automated code refactoring, performance optimization, and developer tooling.</p>
+              </div>
+              <a href="https://github.com/saikatdhrobo/reforge" target="_blank"
+                rel="noopener noreferrer"
+                class="px-4 py-2 rounded-lg bg-white hover:bg-[#e4e6eb] text-[#050505] border border-[#d8dadf] font-semibold text-[13px] flex-shrink-0 transition-colors shadow-sm">
+                Explore Repository
+              </a>
+            </div>
+          </article>
+
+          <!-- SECTION POST 3: 04 FEATURED PROJECTS - Prismatic -->
+          <article class="bg-white rounded-xl shadow-sm border border-[#e4e6eb] overflow-hidden fb-card">
+            <!-- Header -->
+            <div class="px-4 py-2.5 bg-[#f0f2f5] border-b border-[#e4e6eb] flex items-center justify-between">
+              <div class="flex items-center gap-2 text-[#0866ff] font-bold text-[13px]">
+                <span class="material-symbols-outlined text-[17px]">hub</span>
+                <span>Featured Projects — Prismatic</span>
+              </div>
+              <span
+                class="px-2.5 py-0.5 rounded bg-white text-[#050505] text-[11px] font-semibold border border-[#e4e6eb]">Intelligent Systems</span>
+            </div>
+
+            <!-- Post Meta -->
+            <div class="px-4 pt-3.5 pb-2 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <img src="assets/images/profile.jpg" alt="Jakaria Saikat Dhrobo"
+                  class="w-10 h-10 rounded-full object-cover border border-[#e4e6eb]" />
+                <div>
+                  <div class="text-[14px] font-bold text-[#050505]">
+                    Jakaria Saikat Dhrobo
+                    <span class="font-normal text-[#65676b]"> added a Featured Project • </span>
+                    <span class="text-[#050505]">AI & Data Pipeline Engine</span>
+                  </div>
+                  <div class="text-[12px] text-[#65676b]">Modular Framework & System Architecture</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Description & Bullet Points -->
+            <div class="px-4 py-2 text-[14px] text-[#050505] space-y-2.5">
+              <p class="leading-relaxed">
+                High-performance intelligent processing framework designed for modular data pipelines, model telemetry, and dynamic AI agent workflows.
+              </p>
+              <ul
+                class="space-y-1.5 text-[13.5px] text-[#050505] list-disc list-inside bg-[#f8f9fa] p-3 rounded-lg border border-[#e4e6eb]/60">
+                <li><span class="font-semibold">Modular architecture</span> for data transformation & telemetry pipelines</li>
+                <li><span class="font-semibold">Asynchronous workflow orchestration</span> & agentic pipeline execution</li>
+                <li><span class="font-semibold">Extensible plugin interface</span> with lightweight state management</li>
+              </ul>
+              <!-- Tech Tags -->
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                <span class="px-2.5 py-0.5 rounded-full bg-[#f0f2f5] text-[#050505] text-[12px] font-semibold">Python</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-[#f0f2f5] text-[#050505] text-[12px] font-semibold">Agentic AI</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-[#f0f2f5] text-[#050505] text-[12px] font-semibold">Telemetry Pipelines</span>
+              </div>
+            </div>
+
+            <!-- Link Preview Box -->
+            <div class="p-3.5 bg-[#f0f2f5] border-t border-[#e4e6eb] flex items-center justify-between gap-3">
+              <div class="min-w-0">
+                <div class="text-[11px] font-bold text-[#65676b] uppercase flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[13px]">code</span>
+                  <span>github.com/saikatdhrobo</span>
+                </div>
+                <h4 class="text-[14px] font-bold text-[#050505] truncate">Prismatic</h4>
+                <p class="text-[12px] text-[#65676b] truncate">Modular data processing & model orchestration engine.</p>
+              </div>
+              <a href="https://github.com/saikatdhrobo/Prismatic" target="_blank" rel="noopener noreferrer"
+                class="px-4 py-2 rounded-lg bg-white hover:bg-[#e4e6eb] text-[#050505] border border-[#d8dadf] font-semibold text-[13px] flex-shrink-0 transition-colors shadow-sm">
+                Explore Repository
+              </a>
+            </div>
+          </article>
+
+          <!-- SECTION POST 4: 04 FEATURED PROJECTS - KaliakairRental -->
+          <article class="bg-white rounded-xl shadow-sm border border-[#e4e6eb] overflow-hidden fb-card">
+            <!-- Header -->
+            <div class="px-4 py-2.5 bg-[#f0f2f5] border-b border-[#e4e6eb] flex items-center justify-between">
+              <div class="flex items-center gap-2 text-[#0866ff] font-bold text-[13px]">
+                <span class="material-symbols-outlined text-[17px]">dataset</span>
+                <span>Featured Projects — KaliakairRental</span>
+              </div>
+              <span
+                class="px-2.5 py-0.5 rounded bg-white text-[#050505] text-[11px] font-semibold border border-[#e4e6eb]">Full-Stack
+                SaaS</span>
+            </div>
+
+            <!-- Post Meta -->
+            <div class="px-4 pt-3.5 pb-2 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <img src="assets/images/profile.jpg" alt="Jakaria Saikat Dhrobo"
+                  class="w-10 h-10 rounded-full object-cover border border-[#e4e6eb]" />
+                <div>
+                  <div class="text-[14px] font-bold text-[#050505]">
+                    Jakaria Saikat Dhrobo
+                    <span class="font-normal text-[#65676b]"> added a Featured Project • </span>
+                    <span class="text-[#050505]">Web & Backend SaaS</span>
+                  </div>
+                  <div class="text-[12px] text-[#65676b]">System Architecture & Database Design</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Description & Bullet Points -->
+            <div class="px-4 py-2 text-[14px] text-[#050505] space-y-2.5">
+              <p class="leading-relaxed">
+                Data-driven property management system focusing on backend logic and secure data flow. Integrated
+                relational databases using SQLAlchemy and Flask to handle user authentication, property listings, and
+                real-time user dashboards.
+              </p>
+              <ul
+                class="space-y-1.5 text-[13.5px] text-[#050505] list-disc list-inside bg-[#f8f9fa] p-3 rounded-lg border border-[#e4e6eb]/60">
+                <li><span class="font-semibold">Relational database integration</span> with SQLAlchemy & Flask models
+                </li>
+                <li><span class="font-semibold">Secure user authentication</span> & interactive landlord/tenant
+                  dashboards</li>
+                <li><span class="font-semibold">Structured property search</span> & backend filtering logic</li>
+              </ul>
+              <!-- Tech Tags -->
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-[#f0f2f5] text-[#050505] text-[12px] font-semibold">HTML/CSS</span>
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-[#f0f2f5] text-[#050505] text-[12px] font-semibold">JavaScript</span>
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-[#f0f2f5] text-[#050505] text-[12px] font-semibold">Flask</span>
+                <span
+                  class="px-2.5 py-0.5 rounded-full bg-[#f0f2f5] text-[#050505] text-[12px] font-semibold">SQLAlchemy</span>
+              </div>
+            </div>
+
+            <!-- Link Preview Box -->
+            <div class="p-3.5 bg-[#f0f2f5] border-t border-[#e4e6eb] flex items-center justify-between gap-3">
+              <div class="min-w-0">
+                <div class="text-[11px] font-bold text-[#65676b] uppercase flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[13px]">code</span>
+                  <span>github.com/saikatdhrobo</span>
+                </div>
+                <h4 class="text-[14px] font-bold text-[#050505] truncate">modern-rental-platform (KaliakairRental)</h4>
+                <p class="text-[12px] text-[#65676b] truncate">Full-stack property rental SaaS platform with role
+                  authentication.</p>
+              </div>
+              <a href="https://github.com/saikatdhrobo/modern-rental-platform" target="_blank" rel="noopener noreferrer"
+                class="px-4 py-2 rounded-lg bg-white hover:bg-[#e4e6eb] text-[#050505] border border-[#d8dadf] font-semibold text-[13px] flex-shrink-0 transition-colors shadow-sm">
+                Explore Repository
+              </a>
+            </div>
+          </article>
+
+          <!-- SECTION POST 4: 05 EXPERIENCE & CONTRIBUTIONS -->
+          <article id="experience"
+            class="bg-white rounded-xl shadow-sm border border-[#e4e6eb] overflow-hidden fb-card">
+            <!-- Header -->
+            <div class="px-4 py-2.5 bg-[#f0f2f5] border-b border-[#e4e6eb] flex items-center justify-between">
+              <div class="flex items-center gap-2 text-[#0866ff] font-bold text-[13px]">
+                <span class="material-symbols-outlined text-[17px]">history_edu</span>
+                <span>Experience & Contributions</span>
+              </div>
+              <span
+                class="px-2.5 py-0.5 rounded bg-white text-[#050505] text-[11px] font-semibold border border-[#e4e6eb]">Career
+                Timeline</span>
+            </div>
+
+            <div class="p-4 space-y-3">
+              <!-- Milestone 1: FlyRank -->
+              <div class="p-3.5 rounded-xl bg-[#f8f9fa] border border-[#e4e6eb] flex items-start gap-3.5">
+                <div
+                  class="w-10 h-10 rounded-full bg-[#e7f3ff] text-[#0866ff] flex items-center justify-center flex-shrink-0">
+                  <span class="material-symbols-outlined text-[20px]">smart_toy</span>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="flex flex-wrap items-center justify-between gap-1">
+                    <h3 class="font-bold text-[14.5px] text-[#050505]">FlyRank</h3>
+                    <span
+                      class="text-[12px] font-semibold text-[#0866ff] bg-white px-2 py-0.5 rounded border border-[#e4e6eb]">Internship</span>
+                  </div>
+                  <p class="text-[13px] font-semibold text-[#050505]">Backend AI Engineering Intern</p>
+                  <p class="text-[13px] text-[#65676b] mt-1">
+                    Engineered automation and data-heavy applications, developed custom agent skills, model optimization
+                    flows, and backend inference pipelines.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Milestone 2: UFTB Research Assistant -->
+              <div class="p-3.5 rounded-xl bg-[#f8f9fa] border border-[#e4e6eb] flex items-start gap-3.5">
+                <div
+                  class="w-10 h-10 rounded-full bg-[#e7f3ff] text-[#0866ff] flex items-center justify-center flex-shrink-0">
+                  <span class="material-symbols-outlined text-[20px]">science</span>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="flex flex-wrap items-center justify-between gap-1">
+                    <h3 class="font-bold text-[14.5px] text-[#050505]">University of Frontier Technology, Bangladesh
+                      (UFTB)</h3>
+                    <span
+                      class="text-[12px] font-semibold text-[#31a24c] bg-white px-2 py-0.5 rounded border border-[#e4e6eb]">Current
+                      Position</span>
+                  </div>
+                  <p class="text-[13px] font-semibold text-[#050505]">Research Assistant</p>
+                  <p class="text-[13px] text-[#65676b] mt-1">
+                    Conducting academic research on IoT medical hardware, sensor networks, and agent architectures under
+                    supervision of <strong>Md. Rafiqul Islam</strong> (Lecturer, IRE, UFTB).
+                  </p>
+                </div>
+              </div>
+
+              <!-- Milestone 3: UFTB Robotics Club -->
+              <div class="p-3.5 rounded-xl bg-[#f8f9fa] border border-[#e4e6eb] flex items-start gap-3.5">
+                <div
+                  class="w-10 h-10 rounded-full bg-[#f0f2f5] text-[#050505] flex items-center justify-center flex-shrink-0">
+                  <span class="material-symbols-outlined text-[20px]">menu_book</span>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <h3 class="font-bold text-[14.5px] text-[#050505]">UFTB Robotics Club</h3>
+                  <p class="text-[13px] font-semibold text-[#050505]">Publications Assistant</p>
+                  <p class="text-[13px] text-[#65676b] mt-1">
+                    Managed technical writeups, robotics competition documentations, and student workshop publishing
+                    materials.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Milestone 4: GAOTek Inc. -->
+              <div class="p-3.5 rounded-xl bg-[#f8f9fa] border border-[#e4e6eb] flex items-start gap-3.5">
+                <div
+                  class="w-10 h-10 rounded-full bg-[#f0f2f5] text-[#050505] flex items-center justify-center flex-shrink-0">
+                  <span class="material-symbols-outlined text-[20px]">trending_up</span>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <h3 class="font-bold text-[14.5px] text-[#050505]">GAOTek Inc.</h3>
+                  <p class="text-[13px] font-semibold text-[#050505]">Digital Marketing Intern</p>
+                  <p class="text-[13px] text-[#65676b] mt-1">
+                    Executed keyword discovery, search visibility campaigns, and web presence optimization.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- SECTION POST 5: 07 ACHIEVEMENTS & VOLUNTEER WORK -->
+          <article id="achievements"
+            class="bg-white rounded-xl shadow-sm border border-[#e4e6eb] overflow-hidden fb-card">
+            <!-- Header -->
+            <div class="px-4 py-2.5 bg-[#f0f2f5] border-b border-[#e4e6eb] flex items-center justify-between">
+              <div class="flex items-center gap-2 text-[#0866ff] font-bold text-[13px]">
+                <span class="material-symbols-outlined text-[17px]">military_tech</span>
+                <span>Achievements & Volunteer Work</span>
+              </div>
+              <span
+                class="px-2.5 py-0.5 rounded bg-white text-[#050505] text-[11px] font-semibold border border-[#e4e6eb]">Honors
+                & Badges</span>
+            </div>
+
+            <div class="p-4 space-y-3">
+              <!-- Achievement 1: Environment Olympiad -->
+              <div
+                class="p-4 rounded-xl bg-[#f8f9fa] border border-[#e4e6eb] flex flex-col sm:flex-row items-start justify-between gap-3">
+                <div class="flex items-start gap-3.5">
+                  <div
+                    class="w-11 h-11 rounded-xl bg-[#fff4e5] text-[#f7b125] flex items-center justify-center flex-shrink-0 shadow-sm">
+                    <span class="material-symbols-outlined text-[24px]">emoji_events</span>
+                  </div>
+                  <div>
+                    <div class="flex items-center gap-2 flex-wrap">
+                      <h3 class="font-bold text-[14.5px] text-[#050505]">Bangladesh Environment Olympiad 2024</h3>
+                      <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-[#e7f3ff] text-[#0866ff]">Honorable
+                        Award</span>
+                    </div>
+                    <p class="text-[13px] font-semibold text-[#0866ff]">Ecoeen & School of Hidden Talent • Held January
+                      12, 2024</p>
+                    <p class="text-[13px] text-[#65676b] mt-1 leading-relaxed">
+                      Recognized for environmental innovation, ecological awareness project presentation, and scientific
+                      problem-solving methodology.
+                    </p>
+                  </div>
+                </div>
+                <button
+                  class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-white hover:bg-[#e4e6eb] text-[#0866ff] border border-[#d8dadf] text-[12.5px] font-semibold flex-shrink-0 transition-colors shadow-sm self-start sm:self-center"
+                  data-lightbox-src="assets/images/award-environment.jpg"
+                  data-title="Bangladesh Environment Olympiad Certificate">
+                  <span>View Certificate</span>
+                  <span class="material-symbols-outlined text-[15px]">visibility</span>
+                </button>
+              </div>
+
+              <!-- Achievement 2: STEAM Olympiad -->
+              <div
+                class="p-4 rounded-xl bg-[#f8f9fa] border border-[#e4e6eb] flex flex-col sm:flex-row items-start justify-between gap-3">
+                <div class="flex items-start gap-3.5">
+                  <div
+                    class="w-11 h-11 rounded-xl bg-[#e7f3ff] text-[#0866ff] flex items-center justify-center flex-shrink-0 shadow-sm">
+                    <span class="material-symbols-outlined text-[24px]">volunteer_activism</span>
+                  </div>
+                  <div>
+                    <div class="flex items-center gap-2 flex-wrap">
+                      <h3 class="font-bold text-[14.5px] text-[#050505]">National STEAM Olympiad — Executive Volunteer
+                      </h3>
+                      <span
+                        class="px-2 py-0.5 rounded text-[11px] font-semibold bg-[#e7f3ff] text-[#0866ff]">Leadership</span>
+                    </div>
+                    <p class="text-[13px] font-semibold text-[#0866ff]">iTesseract & BSMRDU</p>
+                    <p class="text-[13px] text-[#65676b] mt-1 leading-relaxed">
+                      Organized nationwide participant management, logistics coordination, and technology workshop
+                      sessions for emerging student scientists.
+                    </p>
+                  </div>
+                </div>
+                <button
+                  class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-white hover:bg-[#e4e6eb] text-[#0866ff] border border-[#d8dadf] text-[12.5px] font-semibold flex-shrink-0 transition-colors shadow-sm self-start sm:self-center"
+                  data-lightbox-src="assets/images/volunteer-steam.jpg"
+                  data-title="National STEAM Olympiad Executive Volunteer Badge">
+                  <span>View Badge</span>
+                  <span class="material-symbols-outlined text-[15px]">visibility</span>
+                </button>
+              </div>
+
+              <!-- Achievement 3: Google Skill Badge -->
+              <div
+                class="p-4 rounded-xl bg-[#f8f9fa] border border-[#e4e6eb] flex flex-col sm:flex-row items-start justify-between gap-3">
+                <div class="flex items-start gap-3.5">
+                  <div
+                    class="w-11 h-11 rounded-xl bg-[#e7f3ff] text-[#0866ff] flex items-center justify-center flex-shrink-0 shadow-sm">
+                    <span class="material-symbols-outlined text-[24px]">military_tech</span>
+                  </div>
+                  <div>
+                    <div class="flex items-center gap-2 flex-wrap">
+                      <h3 class="font-bold text-[14.5px] text-[#050505]">Introduction to Generative AI Badge</h3>
+                      <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-[#e7f3ff] text-[#0866ff]">Google
+                        Cloud</span>
+                    </div>
+                    <p class="text-[13px] font-semibold text-[#0866ff]">Google Cloud Skills Boost</p>
+                    <p class="text-[13px] text-[#65676b] mt-1 leading-relaxed">
+                      Awarded for completing core training on generative AI architectures, foundational models, and
+                      deployment principles.
+                    </p>
+                  </div>
+                </div>
+                <button
+                  class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-white hover:bg-[#e4e6eb] text-[#0866ff] border border-[#d8dadf] text-[12.5px] font-semibold flex-shrink-0 transition-colors shadow-sm self-start sm:self-center"
+                  data-lightbox-src="assets/images/google-badge-intro-to-gen-ai.png"
+                  data-title="Google Cloud Skill Badge — Intro to Generative AI">
+                  <span>View Badge</span>
+                  <span class="material-symbols-outlined text-[15px]">visibility</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- CLEAN PORTFOLIO FOOTER END -->
+          <div class="pt-2 pb-1 text-center">
+            <a href="#top"
+              class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-white hover:bg-[#e4e6eb] text-[#0866ff] border border-[#d8dadf] text-[12.5px] font-semibold transition-colors shadow-sm">
+              <span class="material-symbols-outlined text-[16px]">arrow_upward</span> Back to top
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- MINIMAL BOTTOM FOOTER -->
+  <footer class="w-full bg-white border-t border-[#e4e6eb] py-4 text-center text-[12px] text-[#65676b]">
+    <div class="max-w-[1140px] mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2 font-medium">
+        <span class="w-2 h-2 rounded-full bg-[#31a24c] pulse-green"></span>
+        <span>Open to New Collaborations & Opportunities</span>
+        <span class="text-[#d8dadf]">|</span>
+        <span class="italic font-normal">“Try to make myself unique”</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span>© 2026 Jakaria Saikat Dhrobo</span> 
+      </div> 
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX MODAL OVERLAY -->
+  <div id="lightboxModal" class="lightbox-modal hidden" style="display: none !important;">
+    <div class="lightbox-content">
+      <button id="lightboxClose" class="lightbox-close" aria-label="Close modal">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <img id="lightboxImg" class="lightbox-img" style="display: none;" />
+      <div id="lightboxCaption" class="lightbox-caption" style="display: none;"></div>
+    </div>
+  </div>
+
+  <!-- JavaScript Controller -->
+  <script src="js/main.js"></script>
 </body>
 
 </html>
